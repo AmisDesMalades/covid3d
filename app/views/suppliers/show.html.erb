@@ -16,7 +16,10 @@
   <dd><%= @supplier.location %></dd>
 
   <dt>Full address:</dt>
-  <dd><%= @supplier.full_address %></dd>
+  <dd>
+    <%= @supplier.full_address %>
+    <p>Coordinates: <%= @supplier.latitude %> <%= @supplier.longitude %></p>
+  </dd>
 
   <dt>Phone:</dt>
   <dd><%= @supplier.phone %></dd>

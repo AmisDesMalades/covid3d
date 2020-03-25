@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_25_162405) do
+ActiveRecord::Schema.define(version: 2020_03_25_181853) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(version: 2020_03_25_162405) do
     t.string "administrative_contact_email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "machines", force: :cascade do |t|
@@ -102,6 +104,8 @@ ActiveRecord::Schema.define(version: 2020_03_25_162405) do
     t.boolean "available"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "users", force: :cascade do |t|
