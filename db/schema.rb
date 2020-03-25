@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_25_155253) do
+ActiveRecord::Schema.define(version: 2020_03_25_162405) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2020_03_25_155253) do
 
   create_table "machines", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "category"
     t.string "advanced"
     t.string "boolean"
     t.datetime "created_at", precision: 6, null: false
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(version: 2020_03_25_155253) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "category"
     t.string "validated"
     t.string "link"
     t.string "img"
@@ -97,7 +97,7 @@ ActiveRecord::Schema.define(version: 2020_03_25_155253) do
     t.string "location"
     t.string "full_address"
     t.string "phone"
-    t.string "type"
+    t.string "category"
     t.integer "production_capacity"
     t.boolean "available"
     t.datetime "created_at", precision: 6, null: false

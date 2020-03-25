@@ -69,6 +69,6 @@ class MachinesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def machine_params
-      params.require(:machine).permit(:name, :type, :advanced, :boolean)
+      params.require(:machine).permit(:name, :category, :advanced, :boolean)
     end
 end
