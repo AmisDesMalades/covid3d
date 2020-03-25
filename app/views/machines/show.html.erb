@@ -1,0 +1,24 @@
+<div class="page-header">
+  <%= link_to machines_path, class: 'btn btn-default' do %>
+    All Machines
+  <% end %>
+  <%= link_to edit_machine_path(@machine), class: 'btn btn-primary' do %>
+    Edit
+  <% end %>
+  <h1>Show machine</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @machine.name %></dd>
+
+  <dt>Type:</dt>
+  <dd><%= @machine.type %></dd>
+
+  <dt>Advanced:</dt>
+  <dd><%= @machine.advanced %></dd>
+
+  <dt>Boolean:</dt>
+  <dd><%= @machine.boolean %></dd>
+
+</dl>

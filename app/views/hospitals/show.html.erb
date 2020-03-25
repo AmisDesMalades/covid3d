@@ -1,0 +1,33 @@
+<div class="page-header">
+  <%= link_to hospitals_path, class: 'btn btn-default' do %>
+    All Hospitals
+  <% end %>
+  <%= link_to edit_hospital_path(@hospital), class: 'btn btn-primary' do %>
+    Edit
+  <% end %>
+  <h1>Show hospital</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @hospital.name %></dd>
+
+  <dt>Location:</dt>
+  <dd><%= @hospital.location %></dd>
+
+  <dt>Full address:</dt>
+  <dd><%= @hospital.full_address %></dd>
+
+  <dt>Phone:</dt>
+  <dd><%= @hospital.phone %></dd>
+
+  <dt>Email:</dt>
+  <dd><%= @hospital.email %></dd>
+
+  <dt>Administrative contact name:</dt>
+  <dd><%= @hospital.administrative_contact_name %></dd>
+
+  <dt>Administrative contact email:</dt>
+  <dd><%= @hospital.administrative_contact_email %></dd>
+
+</dl>

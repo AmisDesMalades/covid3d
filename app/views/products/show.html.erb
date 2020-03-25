@@ -1,0 +1,27 @@
+<div class="page-header">
+  <%= link_to products_path, class: 'btn btn-default' do %>
+    All Products
+  <% end %>
+  <%= link_to edit_product_path(@product), class: 'btn btn-primary' do %>
+    Edit
+  <% end %>
+  <h1>Show product</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @product.name %></dd>
+
+  <dt>Type:</dt>
+  <dd><%= @product.type %></dd>
+
+  <dt>Validated:</dt>
+  <dd><%= @product.validated %></dd>
+
+  <dt>Link:</dt>
+  <dd><%= @product.link %></dd>
+
+  <dt>Img:</dt>
+  <dd><%= @product.img %></dd>
+
+</dl>
