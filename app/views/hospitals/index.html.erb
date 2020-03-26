@@ -9,6 +9,10 @@
     </p>
   </div>
 
+  <div>
+    <div id="map" style='width: 800px; height: 400px;'></div>
+  </div>
+
   <div class="col-sm-6 text-right">
   <%= link_to new_hospital_path, class: 'btn btn-primary' do %>
     Add New Hospital
@@ -39,7 +43,7 @@
           <td><%= hospital.location %></td>
           <td><%= hospital.full_address %></td>
           <td><p>GPS: [<%= hospital.latitude %>, <%= hospital.longitude %>]</p></td>
-          <td><%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{hospital.latitude},#{hospital.longitude}&markers=#{hospital.latitude},#{hospital.longitude}&zoom=7&size=640x400&key=AIzaSyAnQ0ZKQy4I1J6ltHdaGjQIbzhj6KGY3xo",
+          <td><%= image_tag google_map([ hospital.latitude, hospital.longitude ].join(',')),
               class: 'img-fluid img-rounded', alt: "#{hospital.name} on the map" %></td>
           <td><%= hospital.phone %></td>
           <td><%= hospital.email %></td>
@@ -50,3 +54,34 @@
     </tbody>
   </table>
 </div>
+
+<script>
+  markers = handler.addMarkers(<%=raw @hash.to_json %>);
+  handler = Gmaps.build('Google');
+  handler.buildMap({
+      provider: {
+        disableDefaultUI: true
+        // pass in other Google Maps API options here
+      },
+      internal: {
+        id: 'map'
+      }
+    },
+    function(){
+      markers = handler.addMarkers([
+        {
+          "lat": 0,
+          "lng": 0,
+          "picture": {
+            "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
+            "width":  32,
+            "height": 32
+          },
+          "infowindow": "hello!"
+        }
+      ]);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+    }
+  );
+</script>

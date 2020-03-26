@@ -18,6 +18,12 @@
   <dt>Full address:</dt>
   <dd><%= @hospital.full_address %></dd>
 
+  <dt>Full address:</dt>
+  <%= [ @hospital.latitude, @hospital.longitude ].join(',') %>
+  <%= google_map([ @hospital.latitude, @hospital.longitude ].join(',')) %>
+  <p><%= image_tag google_map([ @hospital.latitude, @hospital.longitude ].join(',')),
+              class: 'img-fluid img-rounded', alt: "#{@hospital.name} on the map" %></p>
+
   <dt>Phone:</dt>
   <dd><%= @hospital.phone %></dd>
 
