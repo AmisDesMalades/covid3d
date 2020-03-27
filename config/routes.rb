@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   resources :hospitals
   get '/privacy', to: 'home#privacy'
   get '/terms', to: 'home#terms'
+  get '/medics', to: 'home#medics'
+  get '/designers', to: 'home#designers'
+  get '/makers', to: 'home#makers'
     authenticate :user, lambda { |u| u.admin? } do
       mount Sidekiq::Web => '/sidekiq'
     end

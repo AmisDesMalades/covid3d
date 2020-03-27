@@ -1,12 +1,66 @@
-<h1>RACE 2 BREATHE</h1>
-<h2>
-  A crowd driven initiative to combat COVID-19
-</h2>
-<p class="lead">
-Race 2 Breathe is an initiative that aims to connect and tool people globally to help combat the current COVID-19 crisis. Our goal is to build a network with medics, 3D print designers and Printer owners and Companies that deliver 3d printed equipments for hospitals. In an effort to make sure hospitals globally keep having access to these much needed supplies.
-Our aim is to build the platform needed for all individuals to collaborate, produce and deliver. 
-</p>
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <%# <h1 class="display-4">Race 2 Breathe</h1> %>
+  <%= image_tag("logo.png", height: 100, alt: "Race2breathe") %>
+  <br />
+  <br />
+  <p class="lead">RACE2BREATHE est la création et mise en place d'un réseau de production et distribution rapide d'éléments de protection essentiels et urgents pour le personnel soignant appuyé par un réseau de bénévoles disposants d'imprimantes 3d et autres outils de prototypage rapide.</p>
+</div>
 
-<p>
-
-</p>
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Ingénieur</h4>
+      </div>
+      <div class="card-body">
+        <%# <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1> %>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Designer industriel</li>
+          <li>Spécialiste 3D</li>
+          <li>Spécialiste</li>
+          <li>Help center access</li>
+        </ul>
+        <%= link_to designers_path do %>
+          <button type="button" class="btn btn-lg btn-block btn-primary">Je veux aider</button>
+          <button type="button" class="btn btn-lg btn-block btn-info">J'ai un projet</button>
+        <% end %>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Pro de santé</h4>
+      </div>
+      <div class="card-body">
+        <%# <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1> %>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>20 users included</li>
+          <li>10 GB of storage</li>
+          <li>Priority email support</li>
+          <li>Help center access</li>
+        </ul>
+        <%= link_to medics_path do %>
+          <button type="button" class="btn btn-lg btn-block btn-primary">J'ai un besoin</button>
+          <button type="button" class="btn btn-lg btn-block btn-info">J'ai un projet</button>
+        <% end %>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Fabricant</h4>
+      </div>
+      <div class="card-body">
+        <%# <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1> %>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>30 users included</li>
+          <li>15 GB of storage</li>
+          <li>Phone and email support</li>
+          <li>Help center access</li>
+        </ul>
+        <%= link_to makers_path do %>
+          <button type="button" class="btn btn-lg btn-block btn-primary">Je veux aider</button>
+          <button type="button" class="btn btn-lg btn-block btn-info">J'ai un projet</button>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
