@@ -1,7 +1,6 @@
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <%= image_tag("logo-3d-covid.png", height: 80) %>
   <%= image_tag("logo-APHP.gif", height: 80) %>
-  <%= image_tag("logo-univ-paris.jpg", height: 80) %>
   <br />
   <br />
   <p class="lead">
@@ -15,13 +14,10 @@
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">Ingénieur</h4>
       </div>
+      <%= image_tag("designer.jpeg", class: "card-img-top") %>
       <div class="card-body">
-        <%# <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1> %>
         <ul class="list-unstyled mt-3 mb-4">
-          <li>Designer industriel</li>
-          <li>Spécialiste 3D</li>
-          <li>Spécialiste</li>
-          <li>Help center access</li>
+          <li></li>
         </ul>
         <%= link_to designers_path do %>
           <button type="button" class="btn btn-lg btn-block btn-primary">Je veux aider</button>
@@ -29,36 +25,26 @@
         <% end %>
       </div>
     </div>
+
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Pro de santé</h4>
+        <h4 class="my-0 font-weight-normal">Soignant</h4>
       </div>
+      <%= image_tag("caducee.jpg", class: "card-img-top") %>
       <div class="card-body">
-        <%# <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1> %>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>20 users included</li>
-          <li>10 GB of storage</li>
-          <li>Priority email support</li>
-          <li>Help center access</li>
-        </ul>
         <%= link_to medics_path do %>
           <button type="button" class="btn btn-lg btn-block btn-primary">J'ai un besoin</button>
           <button type="button" class="btn btn-lg btn-block btn-info">J'ai un projet</button>
         <% end %>
       </div>
     </div>
+
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">Fabricant</h4>
       </div>
+      <%= image_tag("fabriquant.jpeg", class: "card-img-top") %>
       <div class="card-body">
-        <%# <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1> %>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>30 users included</li>
-          <li>15 GB of storage</li>
-          <li>Phone and email support</li>
-          <li>Help center access</li>
-        </ul>
         <%= link_to makers_path do %>
           <button type="button" class="btn btn-lg btn-block btn-primary">Je veux aider</button>
           <button type="button" class="btn btn-lg btn-block btn-info">J'ai un projet</button>
@@ -69,20 +55,23 @@
 </div>
 
 <hr />
-<div class="container bg-faded" style="align: center;">
-  <div class="sm-12">
-    <%= image_tag("logo-ministere-sante.png", height: 100) %>
-    <%= image_tag("logo-dges.jpg", height: 100) %>
-    <%= image_tag("logo-sauver-la-vie.jpg", height: 100) %>
-    <%= image_tag("logo-ageps.jpg", height: 100) %>
-    <%= image_tag("logo-AAA.jpeg", height: 100) %>
-    <%= image_tag("logo-AMC.jpeg", height: 100) %>
-    <%= image_tag("logo-ilumens.jpg", height: 100) %>
-    <%= image_tag("logo-imagine.jpg", height: 100) %>
-    <%= image_tag("logo-centrale.jpg", height: 100) %>
-    <%= image_tag("logo-urb2i.jpg", height: 100) %>
-    <%= image_tag("logo-HEGP.jpg", height: 100) %>
-    <%= image_tag("logo-ensta.jpg", height: 100) %>
-    <%= image_tag("logo-bone3d.png", height: 100) %>
+<div class="container bg-faded">
+  <div class="row">
+    <div class="sm-12 text-center">
+      <%= image_tag("logo-ministere-sante.png", height: 100) %>
+      <%= image_tag("logo-dges.jpg", height: 100) %>
+      <%= image_tag("logo-univ-paris.jpg", height: 100) %>
+      <%= image_tag("logo-sauver-la-vie.jpg", height: 100) %>
+      <%= image_tag("logo-ageps.jpg", height: 100) %>
+      <%= image_tag("logo-AAA.jpeg", height: 100) %>
+      <%= image_tag("logo-AMC.jpeg", height: 100) %>
+      <%= image_tag("logo-ilumens.jpg", height: 100) %>
+      <%= image_tag("logo-imagine.jpg", height: 100) %>
+      <%= image_tag("logo-centrale.jpg", height: 100) %>
+      <%= image_tag("logo-urb2i.jpg", height: 100) %>
+      <%= image_tag("logo-HEGP.jpg", height: 100) %>
+      <%= image_tag("logo-ensta.jpg", height: 100) %>
+      <%= image_tag("logo-bone3d.png", height: 100) %>
+    </div>
   </div>
 </div>
