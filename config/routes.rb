@@ -14,10 +14,18 @@ Rails.application.routes.draw do
   get '/location', to: 'home#location'
   get '/workgroups', to: 'home#workgroups'
   get '/urgent', to: 'home#urgent'
-  get '/projets', to: 'home#projets'
-    authenticate :user, lambda { |u| u.admin? } do
-      mount Sidekiq::Web => '/sidekiq'
-    end
+  get '/ingenieur_projets', to: 'home#ingenieur_projets'
+
+  get '/projet-filtre', to: 'home#projet_filtre'
+  get '/projet-poignee', to: 'home#projet_poignee'
+  get '/projet-respirateur', to: 'home#projet_respirateur'
+  get '/projet-pousse-seringue', to: 'home#projet_pousse_seringue'
+  get '/projet-masque', to: 'home#projet_masque'
+  get '/projet-repartiteur', to: 'home#projet_repartiteur'
+
+  authenticate :user, lambda { |u| u.admin? } do
+    mount Sidekiq::Web => '/sidekiq'
+  end
 
   resources :notifications, only: [:index]
   resources :announcements, only: [:index]
