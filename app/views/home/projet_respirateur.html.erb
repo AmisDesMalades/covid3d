@@ -7,5 +7,8 @@
 </section>
 
 <div class="container">
-  Le groupe de travail Respirateur est en cours de constitution, dans l'intervalle vous pouvez contacter <%= mail_to "3d.covid@aphp.fr" %>
+  Le groupe de travail Respirateur est en cours de constitution, dans l'intervalle vous pouvez nous 
+  <%= mail_to "3d.covid@aphp.fr", subject: "Groupe de travail Respirateur" do %>
+    contacter.
+  <% end %>
 </div>
