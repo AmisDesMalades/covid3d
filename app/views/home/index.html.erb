@@ -14,9 +14,27 @@
 <hr>
 <div class="container">
   <div class="card-deck mb-3 text-center">
-    <div class="card mb-4 shadow-sm">
+
+    <div class="card mb-6 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Ingénieur</h4>
+        <h4 class="my-0 font-weight-normal">Soignant</h4>
+      </div>
+      <%= image_tag("caducee.jpg", class: "card-img-top") %>
+      <div class="card-body">
+      </div>
+      <div class="card-footer">
+        <%= link_to soignant_demandes_path do %>
+          <button type="button" class="btn btn-lg btn-block btn-primary">J'ai besoin d'équipement</button>
+        <% end %>
+        <%= link_to soignant_projets_path do %>
+          <button type="button" class="btn btn-lg btn-block btn-info">J'ai un projet</button>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="card mb-6 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Ingénieur / Fabricant</h4>
       </div>
       <%= image_tag("card-valve.png", class: "card-img-top") %>
       <div class="card-body">
@@ -31,39 +49,6 @@
       </div>
     </div>
 
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Soignant</h4>
-      </div>
-      <%= image_tag("caducee.jpg", class: "card-img-top") %>
-      <div class="card-body">
-      </div>
-      <div class="card-footer">
-        <%= link_to soignant_demandes_path do %>
-          <button type="button" class="btn btn-lg btn-block btn-primary">J'ai un besoin</button>
-        <% end %>
-        <%= link_to soignant_projets_path do %>
-          <button type="button" class="btn btn-lg btn-block btn-info">J'ai un projet</button>
-        <% end %>
-      </div>
-    </div>
-
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Fabricant</h4>
-      </div>
-      <%= image_tag("fabricant.jpg", class: "card-img-top") %>
-      <div class="card-body">
-      </div>
-      <div class="card-footer">
-        <%= link_to fabricant_aide_path do %>
-          <button type="button" class="btn btn-lg btn-block btn-primary">Je veux aider</button>
-        <% end %>
-        <%= link_to fabricant_projets_path do %>
-          <button type="button" class="btn btn-lg btn-block btn-info">J'ai un projet</button>
-        <% end %>
-      </div>
-    </div>
   </div>
 </div>
 
