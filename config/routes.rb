@@ -24,8 +24,9 @@ Rails.application.routes.draw do
   get '/fabricant_aide', to: 'home#fabricant_aide'
   get '/fabricant_projets', to: 'home#fabricant_projets'
 
+  get '/projet-intubation', to: 'home#projet_intubation'
   get '/projet-visiere', to: 'home#projet_visiere'
-  get '/projet-filtre', to: 'home#projet_filtre'
+  get '/projet-valve', to: 'home#projet_valve'
   get '/projet-poignee', to: 'home#projet_poignee'
   get '/projet-respirateur', to: 'home#projet_respirateur'
   get '/projet-pousse-seringue', to: 'home#projet_pousse_seringue'

@@ -2,27 +2,24 @@
   <div class="container">
     <h1>Groupe de travail Pousse-seringue</h1>
     <p class="lead text-muted">
+      Vous avez besoin de pousse-seringues, contactez-nous.
     </p>
   </div>
 </section>
 
 <div class="container">
-  <div class="card-group">
-    <div class="card">
-      <%= mail_to "souhayl.dahmani@gmail.com" do %>
-        <div class="card-body">
-          <h5 class="card-title">Ingénieur, soignant ou fabriquant</h5>
-          <p class="card-text">Vous avez développé un pousse-seringue. Vous pouvez nous présenter votre projet et rejoindre le groupe de travail Pousse-seringue.</p>
-        </div>
+  <div class="row">
+    <div class="col-sm">
+      <%= mail_to "souhayl.dahmani@gmail.com", cc: "3d.covid@aphp.fr",
+        subject: "Demande de pousse-seringue" do %>
+        <h5 class="card-title btn btn-primary btn-lg">Contactez notre groupe de travail</h5>
       <% end %>
+      <br />
+      <%= image_tag("logo-APHP.gif", height: 80, class: "card-img-left") %>
     </div>
-    <div class="card">
-      <%= mail_to "souhayl.dahmani@gmail.com" do %>
-        <div class="card-body">
-          <h5 class="card-title">Soignant</h5>
-          <p class="card-text">Vous avez besoin de pousse-seringues, contactez le groupe de travail Pousse-seringue.</p>
-        </div>
-      <% end %>
+
+    <div class="col-sm">
+        <%= image_tag("pousse-seringue.jpg", height: 200) %>
     </div>
   </div>
 </div>
