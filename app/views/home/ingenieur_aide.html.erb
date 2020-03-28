@@ -10,39 +10,31 @@
   <div class="card-deck mb-3 text-center">
     <div class="card mb-4 shadow-sm">
       <%= image_tag("poignee.jpeg", class: "card-img-top") %>
-      <div class="card-body">
-        <p class="card-text">
-          <%= link_to workgroups_path do %>
-            Participez à un groupe de travail qui vous intéresse
+      <div class="card-footer">
+        <%= link_to workgroups_path do %>
+          Participez à un groupe de travail qui vous intéresse
+        <% end %>      
+      </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+      <%= image_tag("stratasys.jpeg", class: "card-img-top") %>
+        <div class="card-footer">
+          <%= mail_to "jeremy.adam@bone3d.fr" do %>
+            Travaillez avec nous sur la plateforme de production
           <% end %>
-        </p>
-      </div>
+        </div>
     </div>
 
     <div class="card mb-4 shadow-sm">
-      <div class="card">
-        <%= image_tag("stratasys.jpeg", class: "card-img-top") %>
-        <div class="card-body">
-          <p class="card-text">
-            <%= mail_to "jeremy.adam@bone3d.fr" do %>
-              Travaillez avec nous sur la plateforme de production
-            <% end %>
-          </p>
+      <%= image_tag("collaboration.jpeg", class: "card-img-top") %>
+      
+        <div class="card-footer">
+          <%= mail_to "roman.khonsari@aphp.fr" do %>
+            Proposez la création d'un nouveau groupe de travail
+          <% end %>
         </div>
-      </div>
-    </div>
-
-    <div class="card mb-4 shadow-sm">
-      <div class="card">
-        <%= image_tag("collaboration.jpeg", class: "card-img-top") %>
-        <div class="card-body">
-          <p class="card-text">
-            <%= mail_to "roman.khonsari@aphp.fr" do %>
-              Proposez la création d'un nouveau groupe de travail
-            <% end %>
-          </p>
-        </div>
-      </div>
+      
     </div>
   </div>
 </div>
