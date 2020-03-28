@@ -1,0 +1,46 @@
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1>Vous avez besoin de visières de protection</h1>
+    <p class="lead text-muted">
+    </p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="card-deck">
+    <div class="card">
+        <div class="card-body">
+          <%= link_to "http://lafabrique.centralesupelec.fr/visiere/" do %>
+            <h5 class="card-title btn btn-primary btn-lg">Contactez le Consortium COVID 3D</h5>
+          <% end %>
+          <p class="card-text">
+              coordonné par le Dr Jean-Pierre Attal avec:
+          <ul>
+            <li>
+              URB2i (UR 4462) -  Université de Paris et Université Sorbonne Paris Nord
+            </li>
+            <li>
+              Centre de simulation ILumens Paris Diderot 
+            </li>
+            <li>
+              PARCC Inserm U970
+            </li>
+            <li>
+              "La Fabrique" (CentraleSupélec)
+            </li>
+          </ul>
+          </p>
+        </div>
+    </div>
+
+    <div class="card">
+      <%= mail_to "3d.covid@aphp.fr" do %>
+        <div class="card-body">
+          <h5 class="card-title btn btn-primary btn-lg">Contactez notre plateforme de production</h5>
+        <%= image_tag("logo-APHP.gif", height: 80, class: "card-img-left") %>
+          <p class="card-text"></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

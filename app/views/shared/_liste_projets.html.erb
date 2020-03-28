@@ -1,7 +1,7 @@
 <div class="card-deck mb-4 text-center">
 
   <div class="card mb-3 shadow-sm">
-    <%= link_to "http://lafabrique.centralesupelec.fr/visiere/" do %>
+    <%= link_to projet_visiere_path do %>
       <%= image_tag("carte-visiere.jpeg", class: "card-img-top") %>
       <div class="card-footer">
         <h5 class="card-title">Visière</h5>
@@ -40,7 +40,7 @@
   </div>
 
   <div class="card mb-3 shadow-sm">
-    <%= mail_to "3d.covid@aphp.fr" do %>
+    <%= link_to autres_demandes_path do %>
       <%= image_tag("carte-autres.jpg", class: "card-img-top") %>
       <div class="card-footer">
         <h5 class="card-title">Autre demande urgente</h5>
@@ -48,5 +48,3 @@
     <% end %>
   </div>
 </div>
-
-<%= render "shared/form_demande" %>

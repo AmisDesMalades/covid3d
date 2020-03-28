@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/location', to: 'home#location'
   get '/workgroups', to: 'home#workgroups'
   get '/urgent', to: 'home#urgent'
+  get '/autres_demandes', to: 'home#autres_demandes'
   
   get '/ingenieur_aide', to: 'home#ingenieur_aide'
   get '/ingenieur_projets', to: 'home#ingenieur_projets'
@@ -23,6 +24,7 @@ Rails.application.routes.draw do
   get '/fabricant_aide', to: 'home#fabricant_aide'
   get '/fabricant_projets', to: 'home#fabricant_projets'
 
+  get '/projet-visiere', to: 'home#projet_visiere'
   get '/projet-filtre', to: 'home#projet_filtre'
   get '/projet-poignee', to: 'home#projet_poignee'
   get '/projet-respirateur', to: 'home#projet_respirateur'
