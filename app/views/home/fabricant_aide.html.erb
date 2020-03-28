@@ -1,0 +1,87 @@
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1>Fabricant</h1>
+    <p class="lead text-muted">Vous avez un projet en cours : contactez l'un de nos groupes de travail ou proposez la création d'un nouveau groupe.
+    </p>
+  </div>
+</section>
+
+
+<div class="card-deck mb-4 text-center">
+
+  <div class="card mb-3 shadow-sm">
+    <%= link_to projet_filtre_path do %>
+      <%= image_tag("carte-valve.jpeg", class: "card-img-top") %>
+      <div class="card-body">
+        <h5 class="card-title">Filtre</h5>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="card mb-3 shadow-sm">
+    <%= link_to projet_poignee_path do %>
+      <%= image_tag("carte-poignee.jpeg", class: "card-img-top") %>
+      <div class="card-body">
+        <h5 class="card-title">Poignée</h5>
+      </div>
+    <% end %>
+  </div>
+  
+  <div class="card mb-3 shadow-sm">
+    <%= link_to "http://lafabrique.centralesupelec.fr/visiere/" do %>
+      <%= image_tag("carte-visiere.jpeg", class: "card-img-top") %>
+      <div class="card-body">
+        <h5 class="card-title">Visière</h5>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="card mb-3 shadow-sm">
+    <%= link_to projet_respirateur_path do %>
+      <%= image_tag("carte-respirateur.png", class: "card-img-top") %>
+      <div class="card-body">
+        <h5 class="card-title">Respirateur</h5>
+      </div>
+    <% end %>
+  </div>
+
+<div class="card-deck mb-4 text-center">
+  
+  <div class="card mb-3 shadow-sm">
+    <%= link_to projet_pousse_seringue_path do %>
+      <%= image_tag("carte-pousse-seringue.jpeg", class: "card-img-top") %>
+      <div class="card-body">
+        <h5 class="card-title">
+            Pousse-seringue
+        </h5>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="card mb-3 shadow-sm">
+    <%= link_to projet_masque_path do %>
+      <%= image_tag("carte-masque.jpeg", class: "card-img-top") %>
+      <div class="card-body">
+        <h5 class="card-title">Masque</h5>
+      </div>
+    <% end %>
+  </div>
+  
+  <div class="card mb-3 shadow-sm">
+    <%= link_to projet_repartiteur_path do %>
+      <%= image_tag("carte-repartiteur.jpeg", class: "card-img-top") %>
+      <div class="card-body">
+        <h5 class="card-title">Répartiteur</h5>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="card mb-3 shadow-sm">
+    <%= mail_to "roman.khonsari@aphp.fr" do %>
+      <%= image_tag("carte-autres.jpg", class: "card-img-top") %>
+      <div class="card-body">
+        <h5 class="card-title">Proposez un projet</h5>
+      </div>
+    <% end %>
+  </div>
+</div>

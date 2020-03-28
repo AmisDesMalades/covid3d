@@ -7,8 +7,22 @@
 </section>
 
 <div class="container">
-  <p>Pour présenter votre projet et rejoindre le groupe de travail Poignée vous pouvez contacter :</p>
-  <ul>
-    <li><%= mail_to "jeremy.adam@bone3d.fr" %></li>
-  </ul>
+  <div class="card-group">
+    <div class="card">
+      <%= mail_to "jeremy.adam@bone3d.fr" do %>
+        <div class="card-body">
+          <h5 class="card-title">Ingénieur, soignant ou fabriquant</h5>
+          <p class="card-text">Vous avez développé un poignée sans contact. Vous pouvez nous présenter votre projet et rejoindre le groupe de travail Poignée.</p>
+        </div>
+      <% end %>
+    </div>
+    <div class="card">
+      <%= mail_to "jeremy.adam@bone3d.fr" do %>
+        <div class="card-body">
+          <h5 class="card-title">Soignant</h5>
+          <p class="card-text">Vous avez besoin de poignées sans contact, contactez le groupe de travail Poignée.</p>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>

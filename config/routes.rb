@@ -8,13 +8,20 @@ Rails.application.routes.draw do
   get '/privacy', to: 'home#privacy'
   get '/terms', to: 'home#terms'
   get '/medics', to: 'home#medics'
-  get '/designers', to: 'home#designers'
   get '/makers', to: 'home#makers'
   get '/council', to: 'home#council'
   get '/location', to: 'home#location'
   get '/workgroups', to: 'home#workgroups'
   get '/urgent', to: 'home#urgent'
+  
+  get '/ingenieur_aide', to: 'home#ingenieur_aide'
   get '/ingenieur_projets', to: 'home#ingenieur_projets'
+  
+  get '/soignant_demandes', to: 'home#soignant_demandes'
+  get '/soignant_projets', to: 'home#soignant_projets'
+  
+  get '/fabricant_aide', to: 'home#fabricant_aide'
+  get '/fabricant_projets', to: 'home#fabricant_projets'
 
   get '/projet-filtre', to: 'home#projet_filtre'
   get '/projet-poignee', to: 'home#projet_poignee'

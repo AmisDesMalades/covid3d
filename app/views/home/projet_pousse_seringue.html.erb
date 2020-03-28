@@ -7,8 +7,22 @@
 </section>
 
 <div class="container">
-  <p>Pour présenter votre projet et rejoindre le groupe de travail Pousse-seringue vous pouvez contacter :</p>
-  <ul>
-    <li><%= mail_to "souhayl.dahmani@gmail.com" %></li>
-  </ul>
+  <div class="card-group">
+    <div class="card">
+      <%= mail_to "souhayl.dahmani@gmail.com" do %>
+        <div class="card-body">
+          <h5 class="card-title">Ingénieur, soignant ou fabriquant</h5>
+          <p class="card-text">Vous avez développé un pousse-seringue. Vous pouvez nous présenter votre projet et rejoindre le groupe de travail Pousse-seringue.</p>
+        </div>
+      <% end %>
+    </div>
+    <div class="card">
+      <%= mail_to "souhayl.dahmani@gmail.com" do %>
+        <div class="card-body">
+          <h5 class="card-title">Soignant</h5>
+          <p class="card-text">Vous avez besoin de pousse-seringues, contactez le groupe de travail Pousse-seringue.</p>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>

@@ -7,9 +7,22 @@
 </section>
 
 <div class="container">
-  <p>Pour présenter votre projet et rejoindre le groupe de travail Filtre vous pouvez contacter :</p>
-  <ul>
-    <li><%= mail_to "jean-michel.constantin@aphp.fr" %></li>
-    <li><%= mail_to "vincent.degos@aphp.fr" %></li>
-  </ul>
+  <div class="card-group">
+    <div class="card">
+      <%= mail_to "jean-michel.constantin@aphp.fr" do %>
+        <div class="card-body">
+          <h5 class="card-title">Ingénieur, soignant ou fabriquant</h5>
+          <p class="card-text">Vous avez développé un filtre. Vous pouvez nous présenter votre projet et rejoindre le groupe de travail Filtre.</p>
+        </div>
+      <% end %>
+    </div>
+    <div class="card">
+      <%= mail_to "jean-michel.constantin@aphp.fr" do %>
+        <div class="card-body">
+          <h5 class="card-title">Soignant</h5>
+          <p class="card-text">Vous avez besoin de filtres, contactez le groupe de travail Filtre.</p>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
