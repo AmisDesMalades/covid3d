@@ -1,29 +1,17 @@
 <section class="jumbotron text-center">
   <div class="container">
     <h1 class="text-danger">Urgent</h1>
-    <p class="lead text-muted">Les compétences suivantes sont demandées de toute urgence. Si vous pensez correspondre à la demande, veuillez contacter le responsable du groupe concerné ou <%= mail_to "roman.khonsari@aphp.fr" %>.</p>
+    <p class="lead text-muted">Les compétences suivantes sont demandées de toute urgence. Si vous pensez correspondre à la demande, veuillez contacter le responsable du groupe concerné ou <%= mail_to "3d.covid@aphp.fr" %>.</p>
   </div>
 </section>
 
 <div class="row">
-  <div class="col-sm-6">
+  <div class="col-sm">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Responsable médical du groupe Respirateurs</h5>
-        <p class="card-text">Analyser et tester les offres existantes et évaluer la possibilité de produire nous-mêmes un respirateur avec nos partenaires ingénieurs et industriels. </p>
-        <%= mail_to "roman.khonsari@aphp.fr" do %>
-           <p class="btn btn-outline-primary">Nous contacter</p>
-        <% end %>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Responsable médical du groupe Masques</h5>
+        <h5 class="card-title">Responsable du groupe Masques</h5>
         <p class="card-text">Evaluer la large offre de masques imprimés en 3D et trancher la question du filtre en s'appuyant sur nos partenaires ingénieurs et industriels.</p>
-        <%= mail_to "roman.khonsari@aphp.fr" do %>
+        <%= mail_to "3d.covid@aphp.fr" do %>
            <p class="btn btn-outline-primary">Nous contacter</p>
         <% end %>
       </div>
