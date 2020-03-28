@@ -5,6 +5,7 @@
   <br />
   <p class="lead">
     Fédération des initiatives de conception et d’impression 3D pour lutter contre le COVID-19
+    Plateforme interne d'impression haut-débit
   </p>
 </div>
 
@@ -14,11 +15,10 @@
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">Ingénieur</h4>
       </div>
-      <%= image_tag("designer.jpeg", class: "card-img-top") %>
+      <%= image_tag("card-valve.png", class: "card-img-top") %>
       <div class="card-body">
-        <ul class="list-unstyled mt-3 mb-4">
-          <li></li>
-        </ul>
+      </div>
+      <div class="card-footer">
         <%= link_to ingenieur_aide_path do %>
           <button type="button" class="btn btn-lg btn-block btn-primary">Je veux aider</button>
         <% end %>
@@ -34,6 +34,8 @@
       </div>
       <%= image_tag("caducee.jpg", class: "card-img-top") %>
       <div class="card-body">
+      </div>
+      <div class="card-footer">
         <%= link_to soignant_demandes_path do %>
           <button type="button" class="btn btn-lg btn-block btn-primary">J'ai un besoin</button>
         <% end %>
@@ -49,6 +51,8 @@
       </div>
       <%= image_tag("fabriquant.jpeg", class: "card-img-top") %>
       <div class="card-body">
+      </div>
+      <div class="card-footer">
         <%= link_to fabricant_aide_path do %>
           <button type="button" class="btn btn-lg btn-block btn-primary">Je veux aider</button>
         <% end %>
@@ -61,7 +65,7 @@
 </div>
 
 <hr />
-<div class="container bg-faded">
+<div class="container bg-light">
   <div class="row">
     <div class="sm-12 text-center">
       <%= image_tag("logo-ministere-sante.png", height: 100) %>
