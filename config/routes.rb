@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/location', to: 'home#location'
   get '/workgroups', to: 'home#workgroups'
   get '/urgent', to: 'home#urgent'
+  get '/projets', to: 'home#projets'
     authenticate :user, lambda { |u| u.admin? } do
       mount Sidekiq::Web => '/sidekiq'
     end

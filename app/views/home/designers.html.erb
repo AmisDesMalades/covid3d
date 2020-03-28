@@ -1,61 +1,50 @@
 <section class="jumbotron text-center">
   <div class="container">
     <h1>Ingénieurs</h1>
-    <p class="lead text-muted">Vous souhaitez contribuer à l'élaboration de moyens de réponse rapides et innovants pour la crise COVID-19.</p>
+    <p class="lead text-muted">Vous voulez contribuer aux projets 3D COVID et vous êtes ingénieur? Nous avons besoin de votre expertise!
+    </p>
   </div>
 </section>
 
-<table class="table table-striped">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">Projet</th>
-      <th scope="col">Responsable</th>
-      <th scope="col">Mail</th>
-      <th scope="col">Téléphone</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Visières</th>
-      <td>Attal</td>
-      <td><%= mail_to "changeme@changeme.com" %></td>
-      <td>01.23.45.67.89</td>
-    </tr>
-    <tr>
-      <th scope="row">Valves</th>
-      <td>Degos / Constantin</td>
-      <td><%= mail_to "changeme@changeme.com" %></td>
-      <td>01.23.45.67.89</td>
-    </tr>
-    <tr>
-      <th scope="row">Répartiteur</th>
-      <td>à déterminer</td>
-      <td><%= mail_to "changeme@changeme.com" %></td>
-      <td>01.23.45.67.89</td>
-    </tr>
-    <tr>
-      <th scope="row">Pousse-seringue</th>
-      <td>Dhamani</td>
-      <td><%= mail_to "changeme@changeme.com" %></td>
-      <td>01.23.45.67.89</td>
-    </tr>
-    <tr>
-      <th scope="row">Respirateurs</th>
-      <td>à définir</td>
-      <td><%= mail_to "changeme@changeme.com" %></td>
-      <td>01.23.45.67.89</td>
-    </tr>
-    <tr>
-      <th scope="row">Masques</th>
-      <td>à définir</td>
-      <td><%= mail_to "changeme@changeme.com" %></td>
-      <td>01.23.45.67.89</td>
-    </tr>
-    <tr>
-      <th scope="row">Poignées sans contact</th>
-      <td>Adam</td>
-      <td><%= mail_to "changeme@changeme.com" %></td>
-      <td>01.23.45.67.89</td>
-    </tr>
-  </tbody>
-</table>
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm">
+      <div class="card">
+        <%= image_tag("poignee.jpeg", class: "card-img-top") %>
+        <div class="card-body">
+          <p class="card-text">
+            <%= link_to workgroups_path do %>
+              Participez à un groupe de travail qui vous intéresse
+            <% end %>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+      <div class="card">
+        <%= image_tag("stratasys.jpeg", class: "card-img-top") %>
+        <div class="card-body">
+          <p class="card-text">
+            <%= mail_to "jeremy.adam@bone3d.fr" do %>
+              Travaillez avec nous sur la plateforme de production
+            <% end %>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+      <div class="card">
+        <%= image_tag("collaboration.jpeg", class: "card-img-top") %>
+        <div class="card-body">
+          <p class="card-text">
+            <%= mail_to "roman.khonsari@aphp.fr" do %>
+              Proposez la création d'un nouveau groupe de travail
+            <% end %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
