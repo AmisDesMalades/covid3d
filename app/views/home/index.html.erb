@@ -18,7 +18,9 @@
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">Soignant</h4>
       </div>
-      <%= image_tag("landing/landing-caducee.png", class: "card-img-top") %>
+      <%= link_to soignant_path do %>
+        <%= image_tag("landing/landing-caducee.png", class: "card-img-top") %>
+      <% end %>
       <div class="card-footer">
         <%= link_to soignant_path do %>
           <button type="button" class="btn btn-lg btn-block btn-primary">J'ai besoin d'équipement</button>
@@ -30,7 +32,9 @@
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">Ingénieur / Fabricant</h4>
       </div>
-      <%= image_tag("landing/landing-valve.png", class: "card-img-top") %>
+      <%= link_to urgent_path do %>
+        <%= image_tag("landing/landing-valve.png", class: "card-img-top") %>
+      <% end %>
       <div class="card-footer">
         <%= link_to urgent_path do %>
           <button type="button" class="btn btn-lg btn-block btn-primary">Venez nous aider</button>
