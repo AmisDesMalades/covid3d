@@ -8,8 +8,12 @@
 </section>
 
 <div class="container">
-  Le groupe de travail Intubation est en cours de constitution, dans l'intervalle vous pouvez nous 
-  <%= mail_to "jacques.de-montblanc@aphp.fr", cc: "3d.covid@aphp.fr", subject: "Groupe de travail Intubation" do %>
-    contacter.
-  <% end %>
+  <div class="row">
+    <div class="col-sm">
+      Le groupe de travail Intubation est en cours de constitution, dans l'intervalle vous pouvez nous 
+      <%= mail_to "jacques.de-montblanc@aphp.fr", cc: "3d.covid@aphp.fr", subject: "Groupe de travail Intubation" do %>
+        contacter.
+      <% end %>
+    </div>
+  </div>
 </div>

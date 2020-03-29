@@ -14,14 +14,14 @@ Rails.application.routes.draw do
   get '/terms', to: 'home#terms'
   get '/autres_demandes', to: 'home#autres_demandes'
 
-  get '/projet-intubation', to: 'home#projet_intubation'
-  get '/projet-visiere', to: 'home#projet_visiere'
-  get '/projet-valve', to: 'home#projet_valve'
-  get '/projet-poignee', to: 'home#projet_poignee'
-  get '/projet-respirateur', to: 'home#projet_respirateur'
-  get '/projet-pousse-seringue', to: 'home#projet_pousse_seringue'
-  get '/projet-masque', to: 'home#projet_masque'
-  get '/projet-repartiteur', to: 'home#projet_repartiteur'
+  get '/projet_intubation', to: 'home#projet_intubation'
+  get '/projet_visiere', to: 'home#projet_visiere'
+  get '/projet_valve', to: 'home#projet_valve'
+  get '/projet_poignee', to: 'home#projet_poignee'
+  get '/projet_respirateur', to: 'home#projet_respirateur'
+  get '/projet_pousse-seringue', to: 'home#projet_pousse_seringue'
+  get '/projet_masque', to: 'home#projet_masque'
+  get '/projet_repartiteur', to: 'home#projet_repartiteur'
 
   authenticate :user, lambda { |u| u.admin? } do
     mount Sidekiq::Web => '/sidekiq'
