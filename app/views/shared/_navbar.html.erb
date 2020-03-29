@@ -1,21 +1,23 @@
-<% if user_masquerade? %>
-  <div class="alert alert-warning text-center">
-    You're logged in as <b><%= current_user.name %> (<%= current_user.email %>)</b>
-    <%= link_to back_masquerade_path(current_user) do %><%= icon("fas", "times") %> Logout <% end %>
-  </div>
-<% end %>
-
-<nav class="navbar navbar-expand-md navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
     <%= link_to "3D COVID", root_path, class: "navbar-brand" %>
     
-    <%= link_to "Conseil Scientifique", conseil_path, class: "navbar" %>
-    <%= link_to "Groupes de travail", groupes_path, class: "navbar" %>
-    <%= link_to "Contact", contact_path, class: "navbar" %>
-    
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
+    
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to "Conseil Scientifique", conseil_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Groupes de travail", groupes_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Contact", contact_path, class: "nav-link" %>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
