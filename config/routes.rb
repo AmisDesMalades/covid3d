@@ -5,20 +5,21 @@ Rails.application.routes.draw do
   resources :machines
   resources :suppliers
   resources :hospitals
+  get '/conseil', to: 'home#conseil'
+  get '/groupes', to: 'home#groupes'
+  get '/contact', to: 'home#contact'
+  get '/soignant', to: 'home#soignant'
+
   get '/privacy', to: 'home#privacy'
   get '/terms', to: 'home#terms'
   get '/medics', to: 'home#medics'
   get '/makers', to: 'home#makers'
-  get '/council', to: 'home#council'
-  get '/location', to: 'home#location'
-  get '/workgroups', to: 'home#workgroups'
   get '/urgent', to: 'home#urgent'
   get '/autres_demandes', to: 'home#autres_demandes'
   
   get '/ingenieur_aide', to: 'home#ingenieur_aide'
   get '/ingenieur_projets', to: 'home#ingenieur_projets'
   
-  get '/soignant_demandes', to: 'home#soignant_demandes'
   get '/soignant_projets', to: 'home#soignant_projets'
   
   get '/fabricant_aide', to: 'home#fabricant_aide'
