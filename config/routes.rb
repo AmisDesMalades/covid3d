@@ -1,10 +1,10 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
-  resources :products
-  resources :machines
-  resources :suppliers
-  resources :hospitals
+  # resources :products
+  # resources :machines
+  # resources :suppliers
+  # resources :hospitals
   get '/conseil', to: 'home#conseil'
   get '/groupes', to: 'home#groupes'
   get '/contact', to: 'home#contact'
