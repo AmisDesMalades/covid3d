@@ -1,6 +1,7 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  resources :members
   # resources :products
   # resources :machines
   # resources :suppliers
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
   get '/privacy', to: 'home#privacy'
   get '/terms', to: 'home#terms'
   get '/autres_demandes', to: 'home#autres_demandes'
+  get '/infrastructure', to: 'home#infrastructure'
 
   get '/projet_intubation', to: 'home#projet_intubation'
   get '/projet_visiere', to: 'home#projet_visiere'
