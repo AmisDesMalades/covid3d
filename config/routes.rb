@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get '/groupes', to: 'home#groupes'
   get '/contact', to: 'home#contact'
   get '/soignant', to: 'home#soignant'
-  get '/urgent', to: 'home#urgent'
+  get '/ingenieur', to: 'home#ingenieur'
   get '/privacy', to: 'home#privacy'
   get '/terms', to: 'home#terms'
   get '/autres_demandes', to: 'home#autres_demandes'

@@ -1,0 +1,37 @@
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="">Fabricants & Ingénieurs !</h1>
+    <p class="lead text-muted">
+      Nous avons besoin de vos compétences, mettez-vous en lien avec nos deux sites partenaires.
+    </p>
+  </div>
+</section>
+
+<div class="card-deck">
+  <div class="card bg-light">
+    <%= image_tag("logos/logo-JOGL.png", height: '400px', class: "card-img-top") %>
+    <div class="card-body">
+      <h5 class="card-title">
+        <%= link_to "https://jogl.io" do %>
+          R&D - JOGL.io
+        <% end %>
+      </h5>
+      <p class="card-text">
+        Just One Giant Lab (JOGL) est le premier laboratoire de recherche et d'innovation fonctionnant comme une plate-forme de mobilisation massive, ouverte et distribuée pour la résolution collaborative de problématiques d'intérêt général.
+      </p>
+    </div>
+  </div>
+  <div class="card bg-light">
+    <%= image_tag("logos/logo-R2B.jpg", height: '400px', class: "card-img-top") %>
+    <div class="card-body">
+      <h5 class="card-title">
+        <%= link_to "https://race-2-breathe.com" do %>
+          Diffusion - Race 2 Breathe
+        <% end %>
+      </h5>
+      <p class="card-text">
+        Race 2 Breathe est une plateforme qui vise à coordonner les besoins des médecins avec les particuliers et entreprises maîtrisant la technologie d'impression 3D, afin d'aider dans la crise actuelle du COVID-19.
+      </p>
+    </div>
+  </div>
+</div>
