@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # resources :machines
   # resources :suppliers
   # resources :hospitals
+  get '/presse', to: 'home#presse'
   get '/conseil', to: 'home#conseil'
   get '/groupes', to: 'home#groupes'
   get '/contact', to: 'home#contact'
