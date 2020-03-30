@@ -1,6 +1,19 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  namespace :admin do
+      resources :users
+      resources :announcements
+      resources :hospitals
+      resources :machines
+      resources :members
+      resources :notifications
+      resources :products
+      resources :services
+      resources :suppliers
+
+      root to: "users#index"
+    end
   resources :members
   # resources :products
   # resources :machines
