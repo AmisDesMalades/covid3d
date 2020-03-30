@@ -11,19 +11,21 @@
         <li class="nav-item">
           <%= link_to "Conseil Scientifique", conseil_path, class: "nav-link" %>
         </li>
+        <li class="nav-item">
+          <%= link_to "Groupes de travail", groupes_path, class: "nav-link" %>
+        </li>
         <li class="nav-item dropdown">
-        <%= link_to "Groupes de travail", groupes_path, class: "nav-link dropdown-toggle", id:"navbarDropdown", role:"button", "data-toggle":"dropdown", "aria-haspopup":"true", "aria-expanded":"false" %>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          
-          <%= link_to "Visière", projet_visiere_path, class: "dropdown-item" %>
-          <%= link_to "Poignée", projet_poignee_path, class: "dropdown-item" %>
-          <%= link_to "Masque", projet_masque_path, class: "dropdown-item" %>
-          <%= link_to "Pousse-seringue", projet_pousse_seringue_path, class: "dropdown-item" %>
-          <%= link_to "Intubation", projet_intubation_path, class: "dropdown-item" %>
-          <%= link_to "Masque de plongée", projet_masque_plongee_path, class: "dropdown-item" %>
-          <%= link_to "Respirateur", projet_pousse_seringue_path, class: "dropdown-item" %>
-          <%= link_to "Valve", projet_valve_path, class: "dropdown-item" %>
-
+          <%= link_to "Projets", groupes_path, class: "nav-link dropdown-toggle", id:"navbarDropdown", role:"button", "data-toggle":"dropdown", "aria-haspopup":"true", "aria-expanded":"false" %>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to "Visière", projet_visiere_path, class: "dropdown-item" %>
+            <%= link_to "Poignée", projet_poignee_path, class: "dropdown-item" %>
+            <%= link_to "Masque", projet_masque_path, class: "dropdown-item" %>
+            <%= link_to "Pousse-seringue", projet_pousse_seringue_path, class: "dropdown-item" %>
+            <%= link_to "Intubation", projet_intubation_path, class: "dropdown-item" %>
+            <%= link_to "Masque de plongée", projet_masque_plongee_path, class: "dropdown-item" %>
+            <%= link_to "Respirateur", projet_pousse_seringue_path, class: "dropdown-item" %>
+            <%= link_to "Valve", projet_valve_path, class: "dropdown-item" %>
+          </div>
         </li>
         <li class="nav-item">
           <%= link_to "Contact", contact_path, class: "nav-link" %>
