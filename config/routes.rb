@@ -19,8 +19,9 @@ Rails.application.routes.draw do
   get '/projet_valve', to: 'home#projet_valve'
   get '/projet_poignee', to: 'home#projet_poignee'
   get '/projet_respirateur', to: 'home#projet_respirateur'
-  get '/projet_pousse-seringue', to: 'home#projet_pousse_seringue'
+  get '/projet_pousse_seringue', to: 'home#projet_pousse_seringue'
   get '/projet_masque', to: 'home#projet_masque'
+  get '/projet_masque_plongee', to: 'home#projet_masque_plongee'
   get '/projet_repartiteur', to: 'home#projet_repartiteur'
 
   authenticate :user, lambda { |u| u.admin? } do
