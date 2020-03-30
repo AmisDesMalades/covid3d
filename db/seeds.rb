@@ -6,8 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Member.create([
-  {first_name: "Jérémy", last_name: "Adam", job: "fabricant", email: "jeremy.adam@bone3d.fr"},
-  {first_name: "Jean-Pierre", last_name: "Attal", job: "odontologiste", email: "jean-pierre.attal@parisdescartes.fr"},
+  { first_name: "Jérémy", last_name: "Adam", job: "fabricant", email: "jeremy.adam@bone3d.fr" },
+  { first_name: "Jean-Pierre", last_name: "Attal", job: "odontologiste", email: "jean-pierre.attal@parisdescartes.fr" },
+  { first_name: "Thomas", last_name: "Baugnon", job: "DGOS", email: "jean-pierre.attal@parisdescartes.fr" },
+  { first_name: "Jean-Pierre", last_name: "Attal", job: "odontologiste", email: "jean-pierre.attal@parisdescartes.fr" },
 ])
 
 # Supplier.create([
