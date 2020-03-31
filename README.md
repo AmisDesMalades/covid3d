@@ -16,6 +16,3 @@ Fédération des initiatives de conception et d’impression 3D pour lutter cont
 
 - [OK] HTTPS
 - [OK] Defer script => footer
-
-- Bouclier nasal
-- 

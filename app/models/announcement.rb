@@ -1,5 +1,5 @@
 class Announcement < ApplicationRecord
-  TYPES = %w{ new fix update }
+  TYPES = %w{ presse production validation general }
 
   after_initialize :set_defaults
 
