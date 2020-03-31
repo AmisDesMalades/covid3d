@@ -2,7 +2,13 @@
   <div class="container">
     <h1>Vous avez besoin de visières de protection</h1>
     <p class="lead text-muted">
-      Vous avez deux solutions pour en obtenir rapidement.
+      Les visières de protection sont importantes pour éviter les projections lors des soins apportés aux patients
+      COVID-19.
+      Il existe de nombreux modèles développés par des initiatives indépendantes, attention il s'agit de dispositifs
+      médicaux:
+      Leur production, même urgente, doit bénéficier d'un contrôle qualité strict.
+      Voici deux options pour vous procurer rapidement des visières fiables:
+
     </p>
   </div>
 </section>
@@ -12,35 +18,35 @@
   <div class="card">
     <div class="card-body">
       <%= link_to "http://3d4care.org/" do %>
-        <h5 class="card-title btn btn-primary btn-lg">Contactez le Consortium 3D4Care</h5>
+      <h5 class="card-title btn btn-primary btn-lg">Contactez le Consortium 3D4Care</h5>
       <% end %>
       <p class="card-text">
-          coordonné par le Dr Jean-Pierre Attal avec :
-      <ul>
-        <li>
-          URB2i (UR 4462) -  Université de Paris et Université Sorbonne Paris Nord
-        </li>
-        <li>
-          Centre de simulation ILumens Paris Diderot
-        </li>
-        <li>
-          PARCC Inserm U970
-        </li>
-        <li>
-          "La Fabrique" (CentraleSupélec)
-        </li>
-      </ul>
+        coordonné par le Dr Jean-Pierre Attal avec :
+        <ul>
+          <li>
+            URB2i (UR 4462) - Université de Paris et Université Sorbonne Paris Nord
+          </li>
+          <li>
+            Centre de simulation ILumens Paris Diderot
+          </li>
+          <li>
+            PARCC Inserm U970
+          </li>
+          <li>
+            "La Fabrique" (CentraleSupélec)
+          </li>
+        </ul>
       </p>
     </div>
   </div>
 
   <div class="card">
     <%= mail_to "3d.covid@aphp.fr", subject: "Demande de visières" do %>
-      <div class="card-body">
-        <h5 class="card-title btn btn-primary btn-lg">Contactez notre plateforme de production</h5>
+    <div class="card-body">
+      <h5 class="card-title btn btn-primary btn-lg">Contactez notre plateforme de production</h5>
       <%= image_tag("logos/logo-APHP.gif", width: '100%', class: "card-img-left") %>
-        <p class="card-text"></p>
-      </div>
+      <p class="card-text"></p>
+    </div>
     <% end %>
   </div>
 </div>

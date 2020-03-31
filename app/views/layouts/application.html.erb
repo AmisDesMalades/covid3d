@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <%= render 'shared/head' %>
-    <meta name="google-site-verification" content="oPZOrwPz6owhbfxrK_6UCcXq6xklNhGVS6yA2qJScdw" />
-  </head>
 
-  <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/notices' %>
+<head>
+  <%= render 'shared/head' %>
+  <meta name="google-site-verification" content="oPZOrwPz6owhbfxrK_6UCcXq6xklNhGVS6yA2qJScdw" />
+</head>
 
-    <div class="container">
-      <%= yield %>
-    </div>
+<body>
+  <%= render 'shared/navbar' %>
+  <%= render 'shared/notices' %>
 
-    <%= render 'shared/footer' %>
-  </body>
+  <div class="container">
+    <%= yield %>
+  </div>
+
+  <%= render 'shared/footer' %>
+</body>
+
 </html>
