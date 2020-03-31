@@ -34,7 +34,7 @@ Rails.application.routes.draw do
 
   get '/projet_intubation', to: 'home#projet_intubation'
   get '/projet_visiere', to: 'home#projet_visiere'
-  get '/projet_valve', to: 'home#projet_valve'
+  get '/projet_bouclier_nasal', to: 'home#projet_bouclier_nasal'
   get '/projet_poignee', to: 'home#projet_poignee'
   get '/projet_respirateur', to: 'home#projet_respirateur'
   get '/projet_pousse_seringue', to: 'home#projet_pousse_seringue'
