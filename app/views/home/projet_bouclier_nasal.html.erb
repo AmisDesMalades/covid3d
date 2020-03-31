@@ -11,9 +11,10 @@
 <div class="container">
   <div class="row">
     <div class="col-sm">
-      Le groupe de travail est dirigé par le docteur Nicolas Kogane
-      <%= mail_to "nikogane@gmail.com@aphp.fr", cc: "3d.covid@aphp.fr", subject: "Groupe de travail Bouclier nasal" do %>
-
+      Le groupe de travail est dirigé par le docteur Nicolas Kogane :
+      <%= mail_to "nikogane@gmail.com", cc: "3d.covid@aphp.fr", subject: "Groupe de travail Bouclier nasal" do %>
+      nikogane@gmail.com
+      <% end %>
     </div>
   </div>
 </div>
