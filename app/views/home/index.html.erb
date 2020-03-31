@@ -19,11 +19,11 @@
         <h4 class="my-0 font-weight-normal">Soignant</h4>
       </div>
       <%= link_to soignant_path do %>
-        <%= image_tag("landing/landing-caducee.png", class: "card-img-top") %>
+      <%= image_tag("landing/landing-caducee.png", class: "card-img-top") %>
       <% end %>
       <div class="card-footer">
         <%= link_to soignant_path do %>
-          <button type="button" class="btn btn-lg btn-block btn-primary">J'ai besoin d'équipement</button>
+        <button type="button" class="btn btn-lg btn-block btn-primary">J'ai besoin d'équipement</button>
         <% end %>
       </div>
     </div>
@@ -33,11 +33,11 @@
         <h4 class="my-0 font-weight-normal">Ingénieur / Fabricant</h4>
       </div>
       <%= link_to ingenieur_path do %>
-        <%= image_tag("landing/landing-valve.png", class: "card-img-top") %>
+      <%= image_tag("landing/landing-valve.png", class: "card-img-top") %>
       <% end %>
       <div class="card-footer">
         <%= link_to ingenieur_path do %>
-          <button type="button" class="btn btn-lg btn-block btn-primary">Venez nous aider</button>
+        <button type="button" class="btn btn-lg btn-block btn-primary">Venez nous aider</button>
         <% end %>
       </div>
     </div>
@@ -49,7 +49,17 @@
 <hr />
 <div class="container">
   <div class="row">
-    <div class="sm-12 text-center">
+    <div class="col-sm-12 text-center">
+      Avec le soutien particulier de:
+      <br />
+      <%= image_tag("logos/logo-Kering.jpg", height: "150") %>
+      <br />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      Et de nos partenaires:
+      <br />
       <%= image_tag("logos/nuage-logos.png", width: "100%") %>
     </div>
   </div>
