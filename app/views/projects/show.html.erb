@@ -1,0 +1,27 @@
+<div class="page-header">
+  <%= link_to projects_path, class: 'btn btn-default' do %>
+    All Projects
+  <% end %>
+  <%= link_to edit_project_path(@project), class: 'btn btn-primary' do %>
+    Edit
+  <% end %>
+  <h1>Show project</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @project.name %></dd>
+
+  <dt>Description:</dt>
+  <dd><%= @project.description %></dd>
+
+  <dt>Card image url:</dt>
+  <dd><%= @project.card_image_url %></dd>
+
+  <dt>Large image url:</dt>
+  <dd><%= @project.large_image_url %></dd>
+
+  <dt>Status:</dt>
+  <dd><%= @project.status %></dd>
+
+</dl>

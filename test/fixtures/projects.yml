@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  card_image_url: MyString
+  large_image_url: MyString
+  status: MyString
+
+two:
+  name: MyString
+  description: MyString
+  card_image_url: MyString
+  large_image_url: MyString
+  status: MyString

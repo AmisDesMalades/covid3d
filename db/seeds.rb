@@ -38,6 +38,25 @@ Member.create([
   { first_name: "Bertrand", last_name: "Tavitian", job: "médecin", email: "bernard.tavitian@inserm.fr" },
   { first_name: "Pierre-Louis", last_name: "Tharaux", job: "médecin", email: "pierre-louis.tharaud@inserm.fr" }
 ])
+puts '--- Members seeded ---'
+
+Project.create([
+  {name: "Visière" },
+  {name: "Poignée" },
+  {name: "Masque" },
+  {name: "Pousse-seringue" },
+  {name: "Intubation" },
+  {name: "Masque de plongée" },
+  {name: "Respirateur" },
+  {name: "Valve" },
+])
+puts '--- Projects seeded ---'
+
+# Seed DB with at least 1 Admin User
+# User.create({ name: "Philippe Cochin", email: 'philippe@cochin.fr', password: 'sosecure', password_confirmation: 'sosecure'})
+# print 'Admin seeded'
+
+
 
 # Supplier.create([
 #   {name: "Quantum Weasels", location: "[123, 546]", full_address: "12, rue de Rivoli", phone: "0612345678", category: "individual", production_capacity: "2", available: "true"},
@@ -59,9 +78,9 @@ Member.create([
 #   {name: "No contact handles", category: "Hospital parts", validated: true, link: ""}
 # ])
 
-Hospital.create([
-  {name: "Hôpital Necker", location: "[123, 123]", full_address: "149 Rue de Sèvres, 75015 Paris", phone: "01 44 49 40 00", administrative_contact_name: "Dr Weasel", administrative_contact_email: "contact@hospital.com"},
-  {name: "Hôpital Cochin", location: "[654, 123]", full_address: "27 Rue du Faubourg Saint-Jacques, 75014 Paris", phone: "01 58 41 41 41", administrative_contact_name: "Dr Weasel", administrative_contact_email: "contact@hospital.com"},
-  {name: "Hôpital La Pitié-Salpétrière", location: "[321, 123]", full_address: "149 Rue de Sèvres, 75015 Paris", phone: "01 44 49 40 00", administrative_contact_name: "Dr Weasel", administrative_contact_email: "contact@hospital.com"},
-  {name: "Hôpital Pompidou", location: "[123, 456]", full_address: "20 Rue Leblanc, 75015 Paris", phone: "01 56 09 20 00", administrative_contact_name: "Dr Weasel", administrative_contact_email: "contact@hospital.com"}
-])
+# Hospital.create([
+#   {name: "Hôpital Necker", location: "[123, 123]", full_address: "149 Rue de Sèvres, 75015 Paris", phone: "01 44 49 40 00", administrative_contact_name: "Dr Weasel", administrative_contact_email: "contact@hospital.com"},
+#   {name: "Hôpital Cochin", location: "[654, 123]", full_address: "27 Rue du Faubourg Saint-Jacques, 75014 Paris", phone: "01 58 41 41 41", administrative_contact_name: "Dr Weasel", administrative_contact_email: "contact@hospital.com"},
+#   {name: "Hôpital La Pitié-Salpétrière", location: "[321, 123]", full_address: "149 Rue de Sèvres, 75015 Paris", phone: "01 44 49 40 00", administrative_contact_name: "Dr Weasel", administrative_contact_email: "contact@hospital.com"},
+#   {name: "Hôpital Pompidou", location: "[123, 456]", full_address: "20 Rue Leblanc, 75015 Paris", phone: "01 56 09 20 00", administrative_contact_name: "Dr Weasel", administrative_contact_email: "contact@hospital.com"}
+# ])

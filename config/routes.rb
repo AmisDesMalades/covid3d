@@ -2,23 +2,25 @@ require 'sidekiq/web'
 
 Rails.application.routes.draw do
   namespace :admin do
-      resources :users
-      resources :announcements
-      resources :hospitals
-      resources :machines
-      resources :members
-      resources :notifications
-      resources :products
-      resources :services
-      resources :suppliers
-
-      root to: "users#index"
-    end
-  resources :members
+    resources :announcements
+    resources :members
+    resources :projects
+    resources :users
+    resources :hospitals
+    resources :machines
+    resources :notifications
+    resources :products
+    resources :services
+    resources :suppliers
+    
+    root to: "users#index"
+  end
   # resources :products
   # resources :machines
   # resources :suppliers
   # resources :hospitals
+  resources :projects
+  resources :members
   get '/presse', to: 'home#presse'
   get '/conseil', to: 'home#conseil'
   get '/groupes', to: 'home#groupes'
