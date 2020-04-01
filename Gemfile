@@ -25,7 +25,7 @@ gem 'jbuilder', '~> 2.7'
 # Geocoding gem
 gem 'geocoder'
 gem 'gmaps4rails'
-
+gem 'meta-tags'
 gem 'cancancan'
 
 # Use Active Storage variant

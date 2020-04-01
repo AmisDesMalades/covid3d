@@ -5,14 +5,14 @@ Fédération des initiatives de conception et d’impression 3D pour lutter cont
 
 ## Implementation SEO en cours
 
-- Taille des images => Imagify (en cours)
-- Cache assets => cache 1 an sur JS/CSS/PNG/JPG
-- HTTP/2 => Expedited WAF Heroku 
-- SEO Meta => Easy
-- SEO Alt => Alt texte sur les images 
-- SEO Content => Ajouter video+images+textes+presse
-- Sitemap.xml gz ping
-- AMP
+- [KO] Cache assets => cache 1 an sur JS/CSS/PNG/JPG
+- [KO] HTTP/2 => Expedited WAF Heroku 
+- [KO] SEO Alt => Alt texte sur les images 
+- [KO] SEO Content => Ajouter video+images+textes+presse
+- [KO] Sitemap.xml gz ping
+- [KO] AMP
 
+- [OK] Taille des images => Imagify (en cours)
+- [OK] SEO Meta
 - [OK] HTTPS
-- [OK] Defer script => footer
+- [OK] Defer script to footer
