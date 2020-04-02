@@ -26,6 +26,9 @@
             <%= link_to "Masque de plongée", projet_masque_plongee_path, class: "dropdown-item" %>
             <%= link_to "Respirateur", projet_respirateur_path, class: "dropdown-item" %>
             <%= link_to "Bouclier Nasal", projet_bouclier_nasal_path, class: "dropdown-item" %>
+            <%= link_to "Monture de lunette de protection", projet_monture_protection_path, class: "dropdown-item" %>
+            <%= link_to "Masque de ventilation", projet_masque_ventilation_path, class: "dropdown-item" %>
+            <%= link_to "Pousse-bouton", projet_pousse_bouton_path, class: "dropdown-item" %>
           </div>
         </li>
         <li class="nav-item">
@@ -36,6 +39,13 @@
         </li>
         <li class="nav-item">
           <%= link_to "Contact", contact_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item dropdown">
+          <%= link_to "Autres", groupes_path, class: "nav-link dropdown-toggle", id:"navbarDropdown2", role:"button", "data-toggle":"dropdown", "aria-haspopup":"true", "aria-expanded":"false" %>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+            <%= link_to "Respirateur", projet_respirateur_path, class: "dropdown-item" %>
+            <%= link_to "Bouclier Nasal", projet_bouclier_nasal_path, class: "dropdown-item" %>
+          </div>
         </li>
         <li class="nav-item">
           <%- if current_user.try(:admin) %>

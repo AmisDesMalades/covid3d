@@ -1,0 +1,26 @@
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1>Groupe de travail Pousse-bouton</h1>
+    <p class="lead text-muted">
+      Ce petit objet permet d'appuyer sur différents boutons et interrupteurs sans risques de contamination.
+    </p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <%= mail_to "3d.covid@aphp.fr" do %>
+      <div class="card-body">
+        <h5 class="card-title btn btn-primary btn-lg">Contactez notre plateforme de production</h5>
+        <br>
+        <%= image_tag("logos/logo-APHP.gif", width: '100%', class: "card-img-left") %>
+        <p class="card-text"></p>
+      </div>
+      <% end %>
+    </div>
+    <div class="col-sm">
+      <%= image_tag("projets/pousse-bouton-1.jpeg", class: "card-img-top") %>
+    </div>
+  </div>
+</div>

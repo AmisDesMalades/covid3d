@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   get '/terms', to: 'home#terms'
   get '/autres_demandes', to: 'home#autres_demandes'
   get '/infrastructure', to: 'home#infrastructure'
+  get '/remerciements', to: 'home#remerciements'
 
   get '/projet_intubation', to: 'home#projet_intubation'
   get '/projet_visiere', to: 'home#projet_visiere'
@@ -41,6 +42,9 @@ Rails.application.routes.draw do
   get '/projet_masque', to: 'home#projet_masque'
   get '/projet_masque_plongee', to: 'home#projet_masque_plongee'
   get '/projet_repartiteur', to: 'home#projet_repartiteur'
+  get '/projet_pousse_bouton', to: 'home#projet_pousse_bouton'
+  get '/projet_masque_ventilation', to: 'home#projet_masque_ventilation'
+  get '/projet_monture_protection', to: 'home#projet_monture_protection'
 
   authenticate :user, lambda { |u| u.admin? } do
     mount Sidekiq::Web => '/sidekiq'
