@@ -38,14 +38,12 @@
         <li class="nav-item">
           <%= link_to "Nouvelles", announcements_path, class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to "Contact", contact_path, class: "nav-link" %>
-        </li>
         <li class="nav-item dropdown">
-          <%= link_to "Autres", groupes_path, class: "nav-link dropdown-toggle", id:"navbarDropdown2", role:"button", "data-toggle":"dropdown", "aria-haspopup":"true", "aria-expanded":"false" %>
+          <%= link_to "Contact", groupes_path, class: "nav-link dropdown-toggle", id:"navbarDropdown2", role:"button", "data-toggle":"dropdown", "aria-haspopup":"true", "aria-expanded":"false" %>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-            <%= link_to "Respirateur", projet_respirateur_path, class: "dropdown-item" %>
-            <%= link_to "Bouclier Nasal", projet_bouclier_nasal_path, class: "dropdown-item" %>
+            <%= link_to "Presse", presse_path, class: "dropdown-item" %>
+            <%= link_to "Remerciements", remerciements_path, class: "dropdown-item" %>
+            <%= link_to "Adresse", contact_path, class: "dropdown-item" %>
           </div>
         </li>
         <li class="nav-item">
