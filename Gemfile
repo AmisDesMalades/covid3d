@@ -26,7 +26,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'meta-tags'
-gem 'cancancan'
+gem 'pundit'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
