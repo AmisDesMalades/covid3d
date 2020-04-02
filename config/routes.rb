@@ -45,6 +45,7 @@ Rails.application.routes.draw do
   get '/projet_pousse_bouton', to: 'home#projet_pousse_bouton'
   get '/projet_masque_ventilation', to: 'home#projet_masque_ventilation'
   get '/projet_monture_protection', to: 'home#projet_monture_protection'
+  get '/projet_aspirateur_mucosites', to: 'home#projet_aspirateur_mucosites'
 
   authenticate :user, lambda { |u| u.admin? } do
     mount Sidekiq::Web => '/sidekiq'
