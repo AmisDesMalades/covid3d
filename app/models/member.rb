@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Member < ApplicationRecord
-  belongs_to :project, optional: true
+  has_and_belongs_to_many :projects
 end
