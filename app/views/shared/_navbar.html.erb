@@ -16,7 +16,9 @@
           <%= link_to "Groupes de travail", groupes_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
-          <%= link_to "Projets", groupes_path, class: "nav-link dropdown-toggle", id:"navbarDropdown", role:"button", "data-toggle":"dropdown", "aria-haspopup":"true", "aria-expanded":"false" %>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Projets</a>
+
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <%= link_to "Visière", projet_visiere_path, class: "dropdown-item" %>
             <%= link_to "Poignée", projet_poignee_path, class: "dropdown-item" %>
@@ -39,7 +41,8 @@
           <%= link_to "Nouvelles", announcements_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
-          <%= link_to "Contact", groupes_path, class: "nav-link dropdown-toggle", id:"navbarDropdown2", role:"button", "data-toggle":"dropdown", "aria-haspopup":"true", "aria-expanded":"false" %>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Contact</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
             <%= link_to "Presse", presse_path, class: "dropdown-item" %>
             <%= link_to "Remerciements", remerciements_path, class: "dropdown-item" %>
