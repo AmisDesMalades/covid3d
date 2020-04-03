@@ -3,7 +3,7 @@ class CreateJoinTableMembersProjects < ActiveRecord::Migration[6.0]
     create_join_table :members, :projects do |t|
       t.index [:member_id, :project_id]
       t.index [:project_id, :member_id]
-      t.boolean 
+      t.boolean :leader 
     end
   end
 end
