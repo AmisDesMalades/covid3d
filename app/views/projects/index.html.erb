@@ -1,12 +1,23 @@
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1>Projets
+      <% if current_user.try(:admin?) %>
+      <%= link_to new_project_path, class: 'btn btn-primary' do %>
+      Add New Project
+      <% end %>
+      <% end %>
+    </h1>
+    <p class="lead text-muted">
+    </p>
+  </div>
+</section>
+
 <div class="row">
   <div class="col-sm-6">
     <h1>Projects</h1>
   </div>
 
   <div class="col-sm-6 text-right">
-    <%= link_to new_project_path, class: 'btn btn-primary' do %>
-    Add New Project
-    <% end %>
   </div>
 </div>
 

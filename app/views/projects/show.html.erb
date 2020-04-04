@@ -8,10 +8,30 @@
       <% end %>
     </h1>
     <p class="lead text-muted">
-      <%= @project.description %>
+      <%# @project.description %>
     </p>
   </div>
 </section>
+
+<div class="row">
+  <div class="col-sm">
+    <ul class="nav nav-pills nav-justified">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Description</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Equipe</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Fichiers STLs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Notice d'assemblage</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<br />
 
 <div class="row">
   <div class="col-sm-6">
@@ -40,47 +60,37 @@
     </div>
   </div>
   <div class="col-sm-6">
+    <div class="bg-light">
+      <h4>Description</h4>
+      <%= @project.description %>
+    </div>
+    <br />
+    <div class="bg-light">
+      <h4>Statut d'avancement</h4>
+      <%= @project.status %>
+    </div>
+    <br />
+    <div class="bg-light">
+      <h4>Equipe du projet</h4>
+      <% @project.members.each do |member| %>
+      <%= render member %>
+      <% end %>
+    </div>
+    <br />
   </div>
 </div>
 
 <div class="row">
-  <div class="col-3">
-    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
-        Descriptif du projet
-      </a>
-      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Equipe</a>
-      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Fichiers STL</a>
-      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Assemblage</a>
-    </div>
-  </div>
-  <div class="col-9">
-    <div class="tab-content" id="v-pills-tabContent">
-      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-        <h2>Descriptif</h2>
-        Statut: <%= @project.status %>
-        Descriptif: <%= @project.description %>
-      </div>
-      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-        <h2>Equipe du projet</h2>
-        <% @project.members.each do |member| %>
-        <%= member.name %>
-        <% end %>
-      </div>
-      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-        <h2>STLs</h2>
-        <ul>
-          <% @project.stls.each do |stl| %>
-          <li>
-            <%= link_to stl.filename, rails_blob_path(stl, disposition: 'attachment') %>
-          </li>
-          <% end %>
-        </ul>
-      </div>
-      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-        <h2>Assemblage</h2>
-        <%= @project.assembly %>
-      </div>
-    </div>
+  <div class="col">
+    <h4>STLs</h4>
+    <ul>
+      <% @project.stls.each do |stl| %>
+      <li>
+        <%= link_to stl.filename, rails_blob_path(stl, disposition: 'attachment') %>
+      </li>
+      <% end %>
+    </ul>
+    <h4>Assemblage</h4>
+    <%= @project.assembly %>
   </div>
 </div>

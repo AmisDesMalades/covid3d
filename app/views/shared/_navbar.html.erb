@@ -2,8 +2,7 @@
   <div class="container">
     <%= link_to "3D COVID", root_path, class: "navbar-brand" %>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -12,12 +11,8 @@
         <li class="nav-item">
           <%= link_to "Conseil Scientifique", conseil_path, class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to "Groupes de travail", groupes_path, class: "nav-link" %>
-        </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">Projets</a>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projets</a>
 
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <%= link_to "Visière", projet_visiere_path, class: "dropdown-item" %>
@@ -41,8 +36,7 @@
           <%= link_to "Nouvelles", announcements_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">Contact</a>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
             <%= link_to "Presse", presse_path, class: "dropdown-item" %>
             <%= link_to "Remerciements", remerciements_path, class: "dropdown-item" %>

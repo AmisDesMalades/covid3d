@@ -6,13 +6,9 @@ Rails.application.routes.draw do
     resources :members
     resources :projects
     resources :users
-    resources :hospitals
-    resources :machines
-    resources :notifications
-    resources :products
-    resources :services
-    resources :suppliers
-    
+        resources :notifications
+      resources :services
+      
     root to: "users#index"
   end
   # resources :products
