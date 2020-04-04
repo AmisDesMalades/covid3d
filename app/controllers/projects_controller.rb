@@ -30,6 +30,13 @@ class ProjectsController < ApplicationController
     @project.images.attach(params[:project][:images])
     @project.stls.attach(params[:project][:stls])
 
+    params[:project][:member_ids].each do |member_id|
+      unless member_id.empty?
+        member = Member.find(member_id)
+        @project.members << member
+      end
+    end
+
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
@@ -44,6 +51,13 @@ class ProjectsController < ApplicationController
   # PATCH/PUT /projects/1
   # PATCH/PUT /projects/1.json
   def update
+    params[:project][:member_ids].each do |member_id|
+      unless member_id.empty?
+        member = Member.find(member_id)
+        @project.members << member
+      end
+    end
+
     respond_to do |format|
       if @project.update(project_params)
         format.html { redirect_to @project, notice: 'Project was successfully updated.' }
@@ -73,6 +87,6 @@ class ProjectsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def project_params
-      params.require(:project).permit(:name, :description, :assembly, :url, :status, :thumbnail, images: [], stls: [])
+      params.require(:project).permit(:name, :description, :assembly, :url, :status, :thumbnail, images: [], stls: [], member_ids: [])
     end
 end

@@ -22,8 +22,14 @@
 </div>
 
 <div class="form-group">
-  <%= form.label :assemblage %>
-  <%= form.text_area :assemblage, class: 'form-control' %>
+  <%= form.label :members %>
+  <%= collection_select(:project, :member_ids, Member.all, :id, :name, {}, { :multiple => true } )%>
+</div>
+
+
+<div class="form-group">
+  <%= form.label :assembly %>
+  <%= form.text_area :assembly, class: 'form-control' %>
 </div>
 
 <div class="form-group">
