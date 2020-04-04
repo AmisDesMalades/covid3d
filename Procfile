@@ -1,2 +1,2 @@
-web: RUBYOPT='-W:no-deprecated -W:no-experimental' rails server
+web: rails server
 worker: sidekiq
