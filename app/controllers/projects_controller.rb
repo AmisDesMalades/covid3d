@@ -26,7 +26,9 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @project = Project.new(project_params)
+    @project.thumbnail.attach(params[:project][:thumbnail])
     @project.images.attach(params[:project][:images])
+    @project.stls.attach(params[:project][:stls])
 
     respond_to do |format|
       if @project.save
@@ -71,6 +73,6 @@ class ProjectsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def project_params
-      params.require(:project).permit(:name, :description, :card_image_url, :large_image_url, :status, images: [], stl: [])
+      params.require(:project).permit(:name, :description, :assembly, :url, :status, :thumbnail, images: [], stls: [])
     end
 end

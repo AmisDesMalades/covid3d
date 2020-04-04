@@ -13,20 +13,20 @@
   </div>
 </section>
 
-
 <div class="row">
-  <div class="col-sm-6">
-    <h3>Statut:
-      <%= @project.status %>
-    </h3>
-  </div>
   <div class="col-sm-6">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
-        <% @project.images.each do |image| %>
-        <div class="carousel-item">
-          <%= image_tag image, class: "d-block w-100" %>
+        <% @project.images.each_with_index do |image, index| %>
+        <% if index == 0 %>
+        <div class="carousel-item active">
+          <%= image_tag(image, class: "d-block w-100") %>
         </div>
+        <% else %>
+        <div class="carousel-item">
+          <%= image_tag(image, class: "d-block w-100") %>
+        </div>
+        <% end %>
         <% end %>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -39,23 +39,48 @@
       </a>
     </div>
   </div>
+  <div class="col-sm-6">
+  </div>
 </div>
 
 <div class="row">
   <div class="col-3">
     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
-      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
-      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+        Descriptif du projet
+      </a>
+      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Equipe</a>
+      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Fichiers STL</a>
+      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Assemblage</a>
     </div>
   </div>
   <div class="col-9">
     <div class="tab-content" id="v-pills-tabContent">
-      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>
-      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
-      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
-      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+        <h2>Descriptif</h2>
+        Statut: <%= @project.status %>
+        Descriptif: <%= @project.description %>
+      </div>
+      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+        <h2>Equipe du projet</h2>
+        <% @project.members.each do |member| %>
+        <%= member.name %>
+        <% end %>
+      </div>
+      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+        <h2>STLs</h2>
+        <ul>
+          <% @project.stls.each do |stl| %>
+          <li>
+            <%= link_to stl.filename, rails_blob_path(stl, disposition: 'attachment') %>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+        <h2>Assemblage</h2>
+        <%= @project.assembly %>
+      </div>
     </div>
   </div>
 </div>
