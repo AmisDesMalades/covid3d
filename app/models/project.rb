@@ -1,4 +1,5 @@
 class Project < ApplicationRecord
   has_and_belongs_to_many :members
-  enum status: [ :research, :validation, :broadcast, :stopped ]
+  has_many_attached :images
+  has_many_attached :stls
 end
