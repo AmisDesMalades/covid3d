@@ -1,6 +1,6 @@
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <p class="lead">
-    <%= image_tag("landing/landing-logo.png", width: '80%') %>
+    <%= image_tag("landing/landing-logo.png", width: '80%', alt: "3D COVID ⋅ AP-HP") %>
     <h4 style="color: #0646ad;">
       CONCEVOIR - VALIDER - FABRIQUER - DISTRIBUER - COMBATTRE LE VIRUS
     </h4>
@@ -19,11 +19,11 @@
         <h4 class="my-0 font-weight-normal">Soignant</h4>
       </div>
       <%= link_to soignant_path do %>
-      <%= image_tag("landing/landing-caducee.png", class: "card-img-top") %>
+        <%= image_tag("landing/landing-caducee.png", alt: "Accès soignant", class: "card-img-top") %>
       <% end %>
       <div class="card-footer">
         <%= link_to soignant_path do %>
-        <button type="button" class="btn btn-lg btn-block btn-primary">J'ai besoin d'équipement</button>
+          <button type="button" class="btn btn-lg btn-block btn-primary">J'ai besoin d'équipement</button>
         <% end %>
       </div>
     </div>
@@ -33,11 +33,11 @@
         <h4 class="my-0 font-weight-normal">Ingénieur / Fabricant</h4>
       </div>
       <%= link_to ingenieur_path do %>
-      <%= image_tag("landing/landing-valve.png", class: "card-img-top") %>
+        <%= image_tag("landing/landing-valve.png", alt: "Accès ingénieur", class: "card-img-top") %>
       <% end %>
       <div class="card-footer">
         <%= link_to ingenieur_path do %>
-        <button type="button" class="btn btn-lg btn-block btn-primary">Venez nous aider</button>
+          <button type="button" class="btn btn-lg btn-block btn-primary">Venez nous aider</button>
         <% end %>
       </div>
     </div>
@@ -52,14 +52,14 @@
     <div class="col-sm-12 text-center">
       Avec le généreux soutien de
       <br />
-      <%= image_tag("logos/logo-Kering.jpg", height: "150") %>
+        <%= image_tag("logos/logo-Kering.jpg", height: "150", alt: "Kering") %>
       <br />
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12 text-center">
       <br />
-      <%- image_tag("logos/nuage-logos.png", width: "100%") %>
+      <%- image_tag("logos/nuage-logos.png", width: "100%", alt: "Logos des partenaires") %>
       <%= render "shared/nuage_logos" %>
     </div>
   </div>
