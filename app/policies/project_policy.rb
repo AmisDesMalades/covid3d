@@ -14,11 +14,11 @@ class ProjectPolicy < ApplicationPolicy
   end
 
   def create?
-    user.admin?
+    @current_user.try(:admin?)
   end
-
+  
   def update?
-    user.admin?
+    @current_user.try(:admin?)
   end
 
   def destroy?
