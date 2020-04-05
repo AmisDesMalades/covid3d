@@ -28,7 +28,6 @@ gem 'gmaps4rails'
 gem 'meta-tags'
 gem 'pundit'
 
-
 # Use Active Storage variant
 gem "aws-sdk-s3", require: false
 # gem 'image_processing', '~> 1.2'
