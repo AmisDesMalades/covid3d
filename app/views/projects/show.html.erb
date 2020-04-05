@@ -2,9 +2,9 @@
   <div class="container">
     <h1><%= @project.name %>
       <% if policy(@project).update? %>
-        <%= link_to edit_project_path(@project), class: 'btn btn-primary' do %>
-          Edit
-        <% end %>
+      <%= link_to edit_project_path(@project), class: 'btn btn-primary' do %>
+      Edit
+      <% end %>
       <% end %>
     </h1>
     <p class="lead text-muted">
