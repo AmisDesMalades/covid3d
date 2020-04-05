@@ -23,7 +23,7 @@
         <a class="nav-link" href="#">Equipe</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Fichiers STLs</a>
+        <a class="nav-link" href="#">Impression 3D</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Notice d'assemblage</a>
@@ -71,6 +71,11 @@
     </div>
     <br />
     <div class="bg-light">
+      <h4>Site externe: </h4>
+      <%= link_to "Lien externe", @project.url %>
+    </div>
+    <br />
+    <div class="bg-light">
       <h4>Equipe du projet</h4>
       <% @project.members.each do |member| %>
       <%= render member %>
@@ -82,6 +87,8 @@
 
 <div class="row">
   <div class="col">
+    <h3>Impression 3D</h3>
+
     <h4>STLs</h4>
     <ul>
       <% @project.stls.each do |stl| %>
@@ -90,7 +97,23 @@
       </li>
       <% end %>
     </ul>
+
+    <h4>Technologie</h4>
+    <%= @project.technology %>
+
+    <h4>Réglages d'imprimante</h4>
+    <%= @project.printer_settings %>
+
     <h4>Assemblage</h4>
     <%= @project.assembly %>
+
+  </div>
+</div>
+
+<hr />
+<div class="row">
+  <div class="col">
+    <h3>Commentaires</h3>
+    <%= @project.comments %>
   </div>
 </div>

@@ -1,6 +1,13 @@
 <section class="jumbotron text-center">
   <div class="container">
-    <h1>Conseil scientifique</h1>
+    <h1>
+      Conseil scientifique
+      <% if policy(Member.new).create? %>
+      <%= link_to new_member_path, class: 'btn btn-primary' do %>
+      Add Project
+      <% end %>
+      <% end %>
+    </h1>
     <p class="lead text-muted">
       Le Conseil Scientifique évalue les dispositifs proposés par les groupes de travail, teste les prototypes et
       participe à leur validation, avant de coordonner leur mise en fabrication par notre plateforme et nos relais
