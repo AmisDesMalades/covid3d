@@ -8,7 +8,7 @@
       <% end %>
     </h1>
     <p class="lead text-muted">
-      <%# @project.description %>
+      <%= @project.short_description %>
     </p>
   </div>
 </section>
@@ -62,7 +62,7 @@
   <div class="col-sm-6">
     <div class="bg-light">
       <h4>Description</h4>
-      <%= @project.description %>
+      <%== @project.description_html %>
     </div>
     <br />
     <div class="bg-light">

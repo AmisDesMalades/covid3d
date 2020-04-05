@@ -129,6 +129,7 @@ ActiveRecord::Schema.define(version: 2020_04_05_102117) do
     t.string "url"
     t.string "plural_name"
     t.string "short_description"
+    t.string "description_html"
     t.string "slug"
   end
 
