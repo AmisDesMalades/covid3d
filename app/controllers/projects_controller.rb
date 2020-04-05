@@ -12,6 +12,10 @@ class ProjectsController < ApplicationController
   # GET /projects/1.json
   def show
     authorize @project
+
+    if request.path != project_path(@project)
+      return redirect_to @project, :status => :moved_permanently
+    end
   end
 
   # GET /projects/new
@@ -91,7 +95,7 @@ class ProjectsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
-      @project = policy_scope(Project).find(params[:id])
+      @project = policy_scope(Project).friendly.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

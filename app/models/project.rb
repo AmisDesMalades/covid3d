@@ -1,4 +1,7 @@
 class Project < ApplicationRecord
+  extend FriendlyId
+  friendly_id :name, use: [:slugged, :history]
+
   has_and_belongs_to_many :members
   has_one_attached :thumbnail
   has_many_attached :images
