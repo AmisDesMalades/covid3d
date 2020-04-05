@@ -429,7 +429,6 @@ DEPENDENCIES
   pundit
   rails (~> 6.0.2, >= 6.0.2.2)
   rails_best_practices
-  redis (~> 4.0)
   rubocop
   sass-rails (>= 6)
   selenium-webdriver
