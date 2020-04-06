@@ -1,10 +1,10 @@
 <div class="col mb-4">
   <div class="card shadow-sm">
     <%= link_to project do %>
-    <% if project.thumbnail %>
-    <%= image_tag("cards/carte-autres-43.png", class: "card-img-top", alt: project.short_description) %>
-    <% else %>
+    <% if project.thumbnail.attached? %>
     <%= image_tag(project.thumbnail, class: "card-img-top", alt: project.short_description) %>
+    <% else %>
+    <%= image_tag("cards/carte-autres-43.png", class: "card-img-top", alt: project.short_description) %>
     <% end %>
     <div class="card-footer">
       <h5 class="card-title text-center">

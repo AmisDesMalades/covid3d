@@ -98,14 +98,20 @@
       <% end %>
     </ul>
 
+    <% if @project.technology.present? %>
     <h4>Technologie</h4>
     <%= @project.technology %>
+    <% end %>
 
+    <% if @project.printer_settings.present? %>
     <h4>Réglages d'imprimante</h4>
     <%= @project.printer_settings %>
+    <% end %>
 
+    <% if @project.assembly.present? %>
     <h4>Assemblage</h4>
     <%= @project.assembly %>
+    <% end %>
 
   </div>
 </div>
