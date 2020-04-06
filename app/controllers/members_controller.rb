@@ -11,21 +11,25 @@ class MembersController < ApplicationController
   # GET /members/1
   # GET /members/1.json
   def show
+    authorize @member
   end
 
   # GET /members/new
   def new
     @member = Member.new
+    authorize @member
   end
 
   # GET /members/1/edit
   def edit
+    authorize @member
   end
 
   # POST /members
   # POST /members.json
   def create
     @member = Member.new(member_params)
+    authorize @member
 
     respond_to do |format|
       if @member.save
@@ -41,6 +45,7 @@ class MembersController < ApplicationController
   # PATCH/PUT /members/1
   # PATCH/PUT /members/1.json
   def update
+    authorize @member
     respond_to do |format|
       if @member.update(member_params)
         format.html { redirect_to @member, notice: 'Member was successfully updated.' }
@@ -55,6 +60,7 @@ class MembersController < ApplicationController
   # DELETE /members/1
   # DELETE /members/1.json
   def destroy
+    authorize @member
     @member.destroy
     respond_to do |format|
       format.html { redirect_to members_url, notice: 'Member was successfully destroyed.' }
@@ -65,7 +71,7 @@ class MembersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_member
-      @member = Member.find(params[:id])
+      @member = policy_scope(Member).find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
