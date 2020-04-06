@@ -11,25 +11,20 @@
 </div>
 <% end %>
 
+<h2>Description</h2>
 <div class="form-group">
   <%= form.label :name %>
   <%= form.text_field :name, class: 'form-control' %>
 </div>
 
 <div class="form-group">
+  <%= form.label :short_description %>
+  <%= form.text_field :short_description, class: 'form-control' %>
+</div>
+
+<div class="form-group">
   <%= form.label :description %>
   <%= form.text_area :description, class: 'form-control' %>
-</div>
-
-<div class="form-group">
-  <%= form.label :members %>
-  <%= collection_select(:project, :member_ids, Member.all, :id, :name, {}, { :multiple => true } )%>
-</div>
-
-
-<div class="form-group">
-  <%= form.label :assembly %>
-  <%= form.text_area :assembly, class: 'form-control' %>
 </div>
 
 <div class="form-group">
@@ -42,6 +37,34 @@
   <%= form.text_field :url, class: 'form-control' %>
 </div>
 
+<h2>Equipe</h2>
+<div class="form-group">
+  <%= form.label :members %>
+  <%= collection_select(:project, :member_ids, Member.all, :id, :name, {}, { :multiple => true } )%>
+</div>
+
+<h2>STLs et consignes d'impression</h2>
+<div class="form-group">
+  <%= form.label "STLs" %>
+  <%= form.file_field :stls, multiple: true, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+  <%= form.label :assembly %>
+  <%= form.text_area :assembly, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+  <%= form.label :printer_settings %>
+  <%= form.text_area :printer_settings, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+  <%= form.label :comments %>
+  <%= form.text_area :comments, class: 'form-control' %>
+</div>
+
+<h2>Images</h2>
 <div class="form-group">
   <%= form.label :thumbnail %>
   <%= form.file_field :thumbnail, class: 'form-control' %>
@@ -52,10 +75,6 @@
   <%= form.file_field :images, multiple: true, class: 'form-control' %>
 </div>
 
-<div class="form-group">
-  <%= form.label "STLs" %>
-  <%= form.file_field :stls, multiple: true, class: 'form-control' %>
-</div>
 
 <div class="form-group">
   <% if project.persisted? %>
