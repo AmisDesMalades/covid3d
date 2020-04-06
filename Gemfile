@@ -63,16 +63,18 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+gem 'bootstrap', '~> 4.3', '>= 4.3.1'
+gem 'bootstrap_tokenfield_rails'
+gem 'font-awesome-sass', '~> 5.6', '>= 5.6.1'
+gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
+gem 'font_awesome5_rails'
+
 # gem 'administrate', github: 'excid3/administrate', branch: 'jumpstart'
 gem 'administrate'
-gem 'bootstrap', '~> 4.3', '>= 4.3.1'
-gem 'font_awesome5_rails'
 gem 'devise', '~> 4.7', '>= 4.7.0'
-gem 'devise-bootstrapped', github: 'excid3/devise-bootstrapped', branch: 'bootstrap4'
 gem 'devise_masquerade', '~> 1.2'
-gem 'font-awesome-sass', '~> 5.6', '>= 5.6.1'
+gem 'devise-bootstrapped', github: 'excid3/devise-bootstrapped', branch: 'bootstrap4'
 gem 'friendly_id', '~> 5.2', '>= 5.2.5'
-gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 gem 'mini_magick', '~> 4.9', '>= 4.9.2'
 gem 'name_of_person', '~> 1.1'
 gem 'omniauth-facebook', '~> 5.0'
