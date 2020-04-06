@@ -47,7 +47,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem "rails_best_practices"
+  gem 'rails_best_practices'
   gem 'solargraph'
   gem 'rubocop'
 end
@@ -64,8 +64,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # gem 'administrate', github: 'excid3/administrate', branch: 'jumpstart'
-gem "administrate"
+gem 'administrate'
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
+gem 'font_awesome5_rails'
 gem 'devise', '~> 4.7', '>= 4.7.0'
 gem 'devise-bootstrapped', github: 'excid3/devise-bootstrapped', branch: 'bootstrap4'
 gem 'devise_masquerade', '~> 1.2'

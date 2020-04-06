@@ -4,7 +4,7 @@
       Conseil scientifique
       <% if policy(Member.new).create? %>
       <%= link_to new_member_path, class: 'btn btn-primary' do %>
-      Add Project
+      <%= fa_icon("user-plus") %>
       <% end %>
       <% end %>
     </h1>
@@ -20,13 +20,25 @@
   <table class="table table-hover">
     <tbody>
       <% @members.each do |member| %>
+
       <%= content_tag :tr, id: dom_id(member), class: dom_class(member) do %>
       <td><b><%= member.first_name + " " + member.last_name %></b></td>
       <td><%= member.job %></td>
       <td><%= mail_to member.email %></td>
-      <td></td>
+
+      <td>
+      </td>
+
+      <% if policy(member).update? %>
+      <td>
+        <%= link_to edit_member_path(member), class: 'btn btn-primary btn-sm' do %>
+        <%= fa_icon('edit') %>
+        <% end %>
+      </td>
       <% end %>
       <% end %>
+      <% end %>
+
     </tbody>
   </table>
 </div>

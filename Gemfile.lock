@@ -148,6 +148,8 @@ GEM
     ffi (1.12.2)
     font-awesome-sass (5.12.0)
       sassc (>= 1.11)
+    font_awesome5_rails (1.1.1)
+      railties (>= 4.2)
     friendly_id (5.3.0)
       activerecord (>= 4.0.0)
     geocoder (1.6.2)
@@ -407,6 +409,7 @@ DEPENDENCIES
   devise-bootstrapped!
   devise_masquerade (~> 1.2)
   font-awesome-sass (~> 5.6, >= 5.6.1)
+  font_awesome5_rails
   friendly_id (~> 5.2, >= 5.2.5)
   geocoder
   gmaps4rails
