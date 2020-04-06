@@ -1,9 +1,9 @@
 <div class="page-header">
   <%= link_to members_path, class: 'btn btn-default' do %>
-    All Members
+  All Members
   <% end %>
   <%= link_to edit_member_path(@member), class: 'btn btn-primary' do %>
-    Edit
+  Edit
   <% end %>
   <h1>Show member</h1>
 </div>
@@ -20,5 +20,8 @@
 
   <dt>Email:</dt>
   <dd><%= @member.email %></dd>
+
+  <dt>Email:</dt>
+  <dd><%= @member.comment %></dd>
 
 </dl>
