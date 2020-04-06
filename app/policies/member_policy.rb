@@ -14,13 +14,13 @@ class MemberPolicy < ApplicationPolicy
   end
 
   def create?
-    # user && user.admin?
-    user 
+    user && user.admin?
+    # user
   end
   
   def update?
-    # user && user.admin?
-    user 
+    user && user.admin?
+    # user
   end
 
   def destroy?
