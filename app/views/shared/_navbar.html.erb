@@ -22,13 +22,11 @@
         <li class="nav-item">
           <%= link_to "Nouvelles", announcements_path, class: "nav-link" %>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-            <%= link_to "Presse", presse_path, class: "dropdown-item" %>
-            <%- link_to "Remerciements", remerciements_path, class: "dropdown-item" %>
-            <%= link_to "Adresse", contact_path, class: "dropdown-item" %>
-          </div>
+        <li class="nav-item">
+          <%= link_to "Presse", publications_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Contact", contact_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%- if current_user.try(:admin) %>

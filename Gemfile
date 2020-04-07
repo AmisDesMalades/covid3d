@@ -84,3 +84,4 @@ gem 'redcarpet', '~> 3.5'
 gem 'sidekiq', '~> 6.0', '>= 6.0.3'
 gem 'sitemap_generator', '~> 6.0', '>= 6.0.1'
 gem 'whenever', require: false
+gem 'rails-i18n'

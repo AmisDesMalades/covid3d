@@ -1,20 +1,18 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  resources :publications
   namespace :admin do
     resources :announcements
     resources :members
     resources :projects
     resources :users
-        resources :notifications
-      resources :services
-      
+    resources :notifications
+    resources :services
     root to: "users#index"
   end
-  # resources :products
-  # resources :machines
-  # resources :suppliers
-  # resources :hospitals
+
+  resources :publications
   resources :projects
   resources :members
   get '/presse', to: 'home#presse'
@@ -28,20 +26,6 @@ Rails.application.routes.draw do
   get '/autres_demandes', to: 'home#autres_demandes'
   get '/infrastructure', to: 'home#infrastructure'
   get '/remerciements', to: 'home#remerciements'
-
-  get '/projet_intubation', to: 'home#projet_intubation'
-  get '/projet_visiere', to: 'home#projet_visiere'
-  get '/projet_bouclier_nasal', to: 'home#projet_bouclier_nasal'
-  get '/projet_poignee', to: 'home#projet_poignee'
-  get '/projet_respirateur', to: 'home#projet_respirateur'
-  get '/projet_pousse_seringue', to: 'home#projet_pousse_seringue'
-  get '/projet_masque', to: 'home#projet_masque'
-  get '/projet_masque_plongee', to: 'home#projet_masque_plongee'
-  get '/projet_repartiteur', to: 'home#projet_repartiteur'
-  get '/projet_pousse_bouton', to: 'home#projet_pousse_bouton'
-  get '/projet_masque_ventilation', to: 'home#projet_masque_ventilation'
-  get '/projet_monture_protection', to: 'home#projet_monture_protection'
-  get '/projet_aspirateur_mucosites', to: 'home#projet_aspirateur_mucosites'
 
   authenticate :user, lambda { |u| u.admin? } do
     mount Sidekiq::Web => '/sidekiq'

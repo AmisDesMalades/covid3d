@@ -1,0 +1,19 @@
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1>
+      Presse
+      <%= link_to new_publication_path, class: 'btn btn-primary' do %>
+      <%= fa_icon('plus') %>
+      <% end %>
+    </h1>
+    <p class="lead text-muted">
+      Voici les publications concernant notre initiative COVID3D
+    </p>
+  </div>
+</section>
+
+<div class="card-deck">
+  <% @publications.each do |publication| %>
+  <%= render partial: "publication", locals: {publication: publication} %>
+  <% end %>
+</div>
