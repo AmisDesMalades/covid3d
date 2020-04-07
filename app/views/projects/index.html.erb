@@ -12,7 +12,8 @@
   </div>
 </section>
 
-<div class="row row-cols-2 row-cols-md-4">
+<div class="card-columns">
+  <%# <div class="row row-cols-2 row-cols-md-4"> %>
   <% @projects.each_with_index do |project, index| %>
   <%= render partial: "card", locals: {project: project} %>
   <% end %>
