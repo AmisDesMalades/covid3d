@@ -90,13 +90,17 @@
     <h3>Impression 3D</h3>
 
     <h4>STLs</h4>
+    <% if @project.stls.attached? %>
     <ul>
       <% @project.stls.each do |stl| %>
       <li>
-        <%= link_to stl.filename, rails_blob_path(stl, disposition: 'attachment') %>
+        <%= link_to stl.filename, rails_blob_path(stl, disposition: 'attachment'), class: "btn btn-outline-primary" %>
       </li>
       <% end %>
     </ul>
+    <% else %>
+    Aucun STL n'a encore été publié.
+    <% end %>
 
     <% if @project.technology.present? %>
     <h4>Technologie</h4>
