@@ -1,7 +1,8 @@
 class Project < ApplicationRecord
   extend FriendlyId
   friendly_id :name, use: [:slugged, :history]
-  enum technology: [:fdm, :sls, :stereolithography, :others]
+  enum technology: [:fdm, :advanced_printing, :cnc, :lasercutter, :electronics, :silicone]
+  # enum status: [:prototypage, :validation, :diffusion]
 
   has_and_belongs_to_many :members
   has_one_attached :thumbnail

@@ -20,8 +20,8 @@ class ProjectPolicy < ApplicationPolicy
   def update?
     user && user.admin?
   end
-
+  
   def destroy?
-    false
+    user && user.admin?
   end
 end
