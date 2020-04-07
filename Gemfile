@@ -30,6 +30,8 @@ gem 'pundit'
 
 # Use Active Storage variant
 gem "aws-sdk-s3", require: false
+gem "fog-aws"
+
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb

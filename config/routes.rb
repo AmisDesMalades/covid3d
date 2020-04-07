@@ -15,9 +15,6 @@ Rails.application.routes.draw do
   resources :publications
   resources :projects
   resources :members
-  get '/presse', to: 'home#presse'
-  get '/conseil', to: 'home#conseil'
-  get '/groupes', to: 'home#groupes'
   get '/contact', to: 'home#contact'
   get '/soignant', to: 'home#soignant'
   get '/ingenieur', to: 'home#ingenieur'
@@ -35,5 +32,8 @@ Rails.application.routes.draw do
   resources :announcements, only: [:index]
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
   root to: 'home#index'
+
+  get '/sitemap.xml.gz', to: redirect("https://s3-eu-west-3.amazonaws.com/covid3d-production/sitemap.xml.gz")
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
