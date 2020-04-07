@@ -12,7 +12,7 @@ SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new(
 )
 
 # The full path to your bucket
-SitemapGenerator::Sitemap.sitemaps_host = "https://#{'ENV["S3_BUCKET_NAME"]'}.s3.amazonaws.com"
+SitemapGenerator::Sitemap.sitemaps_host = "https://covid3d-production.s3.eu-west-3.amazonaws.com"
 
 SitemapGenerator::Sitemap.create do
   add soignant_path, priority: 0.7, changefreq: 'weekly'
