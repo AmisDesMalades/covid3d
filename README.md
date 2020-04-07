@@ -5,15 +5,18 @@ Fédération des initiatives de conception et d’impression 3D pour lutter cont
 
 ## Implementation en cours
 
+### Setup
+
+- [KO] Email production setup sendgrid
+- [KO] Ajout logos
+
 ### Projets
 
 - [KO] Page show projet 
-- [KO] Page index projet 
+- [KO] Page index projet
 
 ### Référencement
 
-- [KO] Cache assets => cache 1 an sur JS/CSS/PNG/JPG
 - [KO] HTTP/2 => Expedited WAF Heroku
-- [KO] SEO Content => Ajouter video+images+textes+presse
 - [KO] Sitemap.xml gz ping
 - [KO] AMP
