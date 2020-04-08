@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_07_165212) do
+ActiveRecord::Schema.define(version: 2020_04_08_012405) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -135,6 +135,12 @@ ActiveRecord::Schema.define(version: 2020_04_07_165212) do
     t.integer "technology"
     t.text "printer_settings"
     t.text "comments"
+    t.boolean "fdm"
+    t.boolean "advanced"
+    t.boolean "cnc"
+    t.boolean "lasercutter"
+    t.boolean "electronics"
+    t.boolean "silicone"
   end
 
   create_table "publications", force: :cascade do |t|

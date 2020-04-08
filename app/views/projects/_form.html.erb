@@ -68,6 +68,36 @@
 </div>
 
 <div class="form-group row">
+  <%= form.label "Technology", class: 'col-sm-2 col-form-label' %>
+  <div class="col-sm-10">
+    <div class="form-group form-check">
+      <%= form.check_box :fdm, class: 'form-check-input', id: 'check1' %>
+      <label class="form-check-label" for="check1">FDM</label>
+    </div>
+    <div class="form-group form-check">
+      <%= form.check_box :advanced, class: 'form-check-input', id: 'check2' %>
+      <label class="form-check-label" for="check2">Advanced Printer</label>
+    </div>
+    <div class="form-group form-check">
+      <%= form.check_box :cnc, class: 'form-check-input', id: 'check3' %>
+      <label class="form-check-label" for="check3">CNC</label>
+    </div>
+    <div class="form-group form-check">
+      <%= form.check_box :lasercutter, class: 'form-check-input', id: 'check4' %>
+      <label class="form-check-label" for="check4">Laser cutter</label>
+    </div>
+    <div class="form-group form-check">
+      <%= form.check_box :electronics, class: 'form-check-input', id: 'check5' %>
+      <label class="form-check-label" for="check5">Electronics</label>
+    </div>
+    <div class="form-group form-check">
+      <%= form.check_box :silicone, class: 'form-check-input', id: 'check6' %>
+      <label class="form-check-label" for="check6">Silicone</label>
+    </div>
+  </div>
+</div>
+
+<div class="form-group row">
   <%= form.label :printer_settings, class: 'col-sm-2 col-form-label' %>
   <div class="col-sm-10">
     <%= form.text_area :printer_settings, class: 'form-control' %>

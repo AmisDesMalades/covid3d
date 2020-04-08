@@ -3,7 +3,7 @@
     <h1><%= @project.name %>
       <% if policy(@project).update? %>
       <%= link_to edit_project_path(@project), class: 'btn btn-primary' do %>
-      Edit
+      <%= fa_icon('edit') %>
       <% end %>
       <% end %>
     </h1>
@@ -88,6 +88,28 @@
 <div class="row">
   <div class="col">
     <h3>Impression 3D</h3>
+
+    <h4>Technologies utilisées</h4>
+    <ul>
+      <% if @project.fdm %>
+      <li>FDM</li>
+      <% end %>
+      <% if @project.advanced %>
+      <li>Advanced printer</li>
+      <% end %>
+      <% if @project.cnc %>
+      <li>CNC</li>
+      <% end %>
+      <% if @project.lasercutter %>
+      <li>Lasercutter</li>
+      <% end %>
+      <% if @project.electronics %>
+      <li>Electronics</li>
+      <% end %>
+      <% if @project.silicone %>
+      <li>Silicone</li>
+      <% end %>
+    </ul>
 
     <h4>STLs</h4>
     <% if @project.stls.attached? %>
