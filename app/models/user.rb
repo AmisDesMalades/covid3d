@@ -8,10 +8,12 @@ class User < ApplicationRecord
          :registerable,
          :recoverable,
          :rememberable,
-         :omniauthable
+         :omniauthable,
+         :confirmable
 
   has_person_name
 
   has_many :notifications, foreign_key: :recipient_id
   has_many :services
+  has_many :orders
 end

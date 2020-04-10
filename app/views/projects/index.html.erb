@@ -3,7 +3,7 @@
     <h1>Projets
       <% if policy(Project.new).create? %>
       <%= link_to new_project_path, class: 'btn btn-primary' do %>
-      Add Project
+      <%= fa_icon("plus") %>
       <% end %>
       <% end %>
     </h1>
@@ -13,7 +13,6 @@
 </section>
 
 <div class="card-columns">
-  <%# <div class="row row-cols-2 row-cols-md-4"> %>
   <% @projects.each_with_index do |project, index| %>
   <%= render partial: "card", locals: {project: project} %>
   <% end %>

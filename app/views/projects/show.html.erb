@@ -17,6 +17,7 @@
     <div>
       <%= link_to edit_project_path(@project), class: 'btn btn-primary' do %>
         Edit
+        <%= fa_icon('edit') %>
       <% end %>
     </div>
   <% end %>
@@ -26,7 +27,7 @@
   <section class="d-flex flex-row flex-wrap my-5">
     <% @project.images.each_with_index do |image, index| %>
       <div class="flex-grow-1 w-25">
-        <%= image_tag(image, class: "img-thumbnail w-100 h-100", style: "object-fit: cover; max-height: 280px") %>
+        <%= image_tag(image.variant(resize_to_limit: [280, 280]).processed, class: "img-thumbnail w-100 h-100", style: "object-fit: cover; max-height: 280px") %>
       </div>
     <% end %>
   </section>
@@ -42,7 +43,35 @@
 <% end %>
 
 <section class="my-5">
-  <h2 class="my-4 display-4">Comment l'imprimer ?</h2>
+  <h2 class="my-4 display-4">Impression</h2>
+
+    <h5>Technologies utilisées</h5>
+    <ul>
+      <% if @project.fdm %>
+        <li>FDM</li>
+      <% end %>
+
+      <% if @project.advanced %>
+        <li>Advanced printer</li>
+      <% end %>
+      
+      <% if @project.cnc %>
+        <li>CNC</li>
+      <% end %>
+      
+      <% if @project.lasercutter %>
+        <li>Lasercutter</li>
+      <% end %>
+      
+      <% if @project.electronics %>
+        <li>Electronics</li>
+      <% end %>
+      
+      <% if @project.silicone %>
+        <li>Silicone</li>
+      <% end %>
+    </ul>
+
 
     <h5>Fichier(s) STL</h5>
       <% if @project.stls.attached? %>
@@ -54,9 +83,8 @@
         <% end %>
       </ul>
       <% else %>
-      Aucun STL n'a encore été publié.
-    <% end %>
-
+      Aucun fichier STL n'a encore été publié.
+      <% end %>
 
     <% if @project.technology.present? %>
       <div class="my-3">

@@ -1,0 +1,57 @@
+<%= form_with(model: order, local: true) do |form| %>
+<% if order.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+  <ul>
+    <% order.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div class="form-group row">
+  <%= form.label :hospital, class: 'col-sm-2 col-form-label' %>
+  <div class="col-sm-10">
+    <%= form.text_field :hospital, class: 'form-control' %>
+  </div>
+</div>
+
+<div class="form-group row">
+  <%= form.label :reference, class: 'col-sm-2 col-form-label' %>
+  <div class="col-sm-10">
+    <%= form.text_field :reference, class: 'form-control' %>
+  </div>
+</div>
+
+<div class="form-group row">
+  <%= form.label :comment, class: 'col-sm-2 col-form-label' %>
+  <div class="col-sm-10">
+    <%= form.text_area :comment, class: 'form-control' %>
+  </div>
+</div>
+
+<div class="form-group row">
+  <%= form.label "Images", class: 'col-sm-2 col-form-label' %>
+  <div class="col-sm-10">
+    <%= form.file_field :images, multiple: true, class: 'form-control' %>
+  </div>
+</div>
+
+<div class="form-group">
+  <% if order.persisted? %>
+  <div class="float-right">
+    <%= link_to 'Destroy', order, method: :delete, class: "text-danger", data: { confirm: 'Are you sure?' } %>
+  </div>
+  <% end %>
+
+  <%= form.submit class: 'btn btn-primary' %>
+
+  <% if order.persisted? %>
+  <%= link_to "Cancel", order, class: "btn btn-link" %>
+  <% else %>
+  <%= link_to "Cancel", orders_path, class: "btn btn-link" %>
+  <% end %>
+</div>
+<% end %>

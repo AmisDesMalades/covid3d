@@ -32,7 +32,7 @@ gem 'pundit'
 gem "aws-sdk-s3", require: false
 gem "fog-aws"
 
-# gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -51,7 +51,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'rails_best_practices'
   gem 'solargraph'
-  gem 'rubocop'
+  gem 'rubocop-rails'
+  gem "letter_opener"
 end
 
 group :test do
