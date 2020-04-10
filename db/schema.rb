@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_10_015148) do
+ActiveRecord::Schema.define(version: 2020_04_10_163741) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -152,6 +152,11 @@ ActiveRecord::Schema.define(version: 2020_04_10_015148) do
     t.boolean "lasercutter"
     t.boolean "electronics"
     t.boolean "silicone"
+    t.string "license"
+    t.string "website"
+    t.string "author"
+    t.string "author_url"
+    t.boolean "published"
   end
 
   create_table "publications", force: :cascade do |t|
