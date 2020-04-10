@@ -30,3 +30,16 @@ body>.alert {
     column-count: 5;
   }
 }
+
+.navbar-brand {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.navbar {
+  padding: 2rem 1rem;
+  .navbar-nav > .nav-item > a {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}

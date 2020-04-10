@@ -1,5 +1,8 @@
-<li>
-  <%= member.name %> -
-  <%= member.job %> -
-  <%= mail_to member.name, member.email %>
-</li>
+<div class="media">
+  <div class="media-body">
+    <h5><strong><%= member.name %></strong> - <%= member.job %></h5>
+    <p>
+      <%= mail_to member.name, member.email %>
+    </p>
+  </div>
+</div>

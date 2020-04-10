@@ -1,129 +1,98 @@
-<section class="jumbotron text-center">
-  <div class="container">
-    <h1><%= @project.name %>
-      <% if policy(@project).update? %>
-      <%= link_to edit_project_path(@project), class: 'btn btn-primary' do %>
-      Edit
-      <% end %>
-      <% end %>
-    </h1>
-    <p class="lead text-muted">
-      <%= @project.short_description %>
-    </p>
+<section class="my-5 flex-row d-flex justify-content-between">
+  <div>
+    <div class="d-flex flex-row align-items-center flex-wrap">
+      <h1 class="display-3 mr-4">
+        <%= @project.name.upcase %>
+      <h1>
+      <h4 class=""><span class="badge badge-secondary my-2"><%= project_status_in_words(@project).capitalize %></span></h4>
+    </div>
+    <% if @project.short_description.present? %>
+      <p class="lead text-muted font-italic">
+        <%= @project.short_description %>
+      </p>
+    <% end %>
   </div>
+
+  <% if policy(@project).update? %>
+    <div>
+      <%= link_to edit_project_path(@project), class: 'btn btn-primary' do %>
+        Edit
+      <% end %>
+    </div>
+  <% end %>
 </section>
 
-<div class="row">
-  <div class="col-sm">
-    <ul class="nav nav-pills nav-justified">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Description</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Equipe</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Impression 3D</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Notice d'assemblage</a>
-      </li>
-    </ul>
-  </div>
-</div>
-<br />
-
-<div class="row">
-  <div class="col-sm-6">
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <% @project.images.each_with_index do |image, index| %>
-        <% if index == 0 %>
-        <div class="carousel-item active">
-          <%= image_tag(image, class: "d-block w-100") %>
-        </div>
-        <% else %>
-        <div class="carousel-item">
-          <%= image_tag(image, class: "d-block w-100") %>
-        </div>
-        <% end %>
-        <% end %>
+<% if @project.images.any? %>
+  <section class="d-flex flex-row flex-wrap my-5">
+    <% @project.images.each_with_index do |image, index| %>
+      <div class="flex-grow-1 w-25">
+        <%= image_tag(image, class: "img-thumbnail w-100 h-100", style: "object-fit: cover; max-height: 280px") %>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="bg-light">
-      <h4>Description</h4>
-      <%== @project.description_html %>
-    </div>
-    <br />
-    <div class="bg-light">
-      <h4>Statut d'avancement</h4>
-      <%= @project.status %>
-    </div>
-    <br />
-    <div class="bg-light">
-      <h4>Site externe: </h4>
-      <%= link_to "Lien externe", @project.url %>
-    </div>
-    <br />
-    <div class="bg-light">
-      <h4>Equipe du projet</h4>
-      <% @project.members.each do |member| %>
-      <%= render member %>
-      <% end %>
-    </div>
-    <br />
-  </div>
-</div>
+    <% end %>
+  </section>
+<% end %>
 
-<div class="row">
-  <div class="col">
-    <h3>Impression 3D</h3>
+<% if @project.description.present? || @project.url.present? %>
+  <blockquote class="blockquote my-5">
+    <%== @project.description_html %>
+    <% if @project.url.present? %>
+      <strong><%= link_to "Voir le site du projet", @project.url %></strong>
+    <% end %>
+  </blockquote>
+<% end %>
 
-    <h4>STLs</h4>
-    <% if @project.stls.attached? %>
-    <ul>
-      <% @project.stls.each do |stl| %>
-      <li>
-        <%= link_to stl.filename, rails_blob_path(stl, disposition: 'attachment'), class: "btn btn-outline-primary" %>
-      </li>
-      <% end %>
-    </ul>
-    <% else %>
-    Aucun STL n'a encore été publié.
+<section class="my-5">
+  <h2 class="my-4 display-4">Comment l'imprimer ?</h2>
+
+    <h5>Fichier(s) STL</h5>
+      <% if @project.stls.attached? %>
+      <ul>
+        <% @project.stls.each do |stl| %>
+        <li>
+          <%= link_to stl.filename, rails_blob_path(stl, disposition: 'attachment'), class: "btn btn-outline-primary" %>
+        </li>
+        <% end %>
+      </ul>
+      <% else %>
+      Aucun STL n'a encore été publié.
     <% end %>
 
+
     <% if @project.technology.present? %>
-    <h4>Technologie</h4>
-    <%= @project.technology %>
+      <div class="my-3">
+        <h5>Technologie</h5>
+        <%= @project.technology %>
+      </div>
     <% end %>
 
     <% if @project.printer_settings.present? %>
-    <h4>Réglages d'imprimante</h4>
-    <%= @project.printer_settings %>
+      <div class="my-3">
+        <h5>Réglages d'imprimante</h5>
+        <blockquote class="blockquote"><%= @project.printer_settings %></blockquote>
+      </div>
     <% end %>
 
     <% if @project.assembly.present? %>
-    <h4>Assemblage</h4>
-    <%= @project.assembly %>
+      <div class="my-3">
+        <h5>Assemblage</h5>
+        <blockquote class="blockquote"><%= @project.assembly %></blockquote>
+      </div>
     <% end %>
 
-  </div>
-</div>
+</section>
+
+<% if @project.members.any? %>
+  <section class="my-5">
+    <h2 class="my-4 display-4">L'équipe</h2>
+    <% @project.members.each do |member| %>
+      <%= render member %>
+    <% end %>
+  </section>
+<% end %>
 
 <hr />
 <div class="row">
   <div class="col">
-    <h3>Commentaires</h3>
     <%= @project.comments %>
   </div>
 </div>
