@@ -8,7 +8,8 @@ class User < ApplicationRecord
          :registerable,
          :recoverable,
          :rememberable,
-         :omniauthable
+         :omniauthable,
+         :confirmable
 
   has_person_name
 
