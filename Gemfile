@@ -52,7 +52,9 @@ group :development do
   gem 'rails_best_practices'
   gem 'solargraph'
   gem 'rubocop-rails'
-  gem "letter_opener"
+  gem 'letter_opener'
+  gem 'guard'
+  gem 'guard-livereload', '~> 2.5', require: false
 end
 
 group :test do
