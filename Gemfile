@@ -72,6 +72,9 @@ gem 'font-awesome-sass', '~> 5.6', '>= 5.6.1'
 gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 gem 'font_awesome5_rails'
 
+# Security
+gem 'actionview-encoded_mail_to'
+
 # gem 'administrate', github: 'excid3/administrate', branch: 'jumpstart'
 gem 'administrate'
 gem 'devise', '~> 4.7', '>= 4.7.0'

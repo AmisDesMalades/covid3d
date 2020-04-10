@@ -22,9 +22,9 @@
       <% @members.each do |member| %>
 
       <%= content_tag :tr, id: dom_id(member), class: dom_class(member) do %>
-      <td><b><%= member.first_name + " " + member.last_name %></b></td>
+      <td><b><%= member.name %></b></td>
       <td><%= member.job %></td>
-      <td><%= mail_to member.email %></td>
+      <td><%= mail_to member.email, member.email, encode: "hex" %></td>
       <td><%= member.comment %></td>
 
       <% if policy(member).update? %>

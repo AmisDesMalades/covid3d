@@ -28,7 +28,7 @@
       <% @orders.each do |order| %>
       <%= content_tag :tr, id: dom_id(order), class: dom_class(order) do %>
 
-      <td><%= mail_to order.user.email, order.user.name %></td>
+      <td><%= mail_to order.user.email, order.user.name, encode: "hex" %></td>
       <td><%= order.hospital %></td>
       <td><%= order.reference %></td>
       <td><%= order.comment %></td>
