@@ -40,11 +40,11 @@
         <% @project.images.each_with_index do |image, index| %>
         <% if index == 0 %>
         <div class="carousel-item active">
-          <%= image_tag(image, class: "d-block w-100") %>
+          <%= image_tag(image.variant(resize_to_limit: [800, 600]).processed, class: "d-block w-100") %>
         </div>
         <% else %>
         <div class="carousel-item">
-          <%= image_tag(image, class: "d-block w-100") %>
+          <%= image_tag(image.variant(resize_to_limit: [800, 600]).processed, class: "d-block w-100") %>
         </div>
         <% end %>
         <% end %>
@@ -67,7 +67,8 @@
     <br />
     <div class="bg-light">
       <h4>Statut d'avancement</h4>
-      <%= @project.status %>
+      <%# @project.status %>
+      En cours de validation
     </div>
     <br />
     <div class="bg-light">
