@@ -6,6 +6,8 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = policy_scope(Project)
+      .with_attached_images
+      .with_attached_stls
   end
 
   # GET /projects/1
