@@ -78,7 +78,7 @@
     <br />
     <div class="bg-light">
       <h4>Equipe du projet</h4>
-      <% @project.members.each do |member| %>
+      <% @project.members.uniq.each do |member| %>
       <%= render member %>
       <% end %>
     </div>
@@ -115,7 +115,7 @@
     <h4>STLs</h4>
     <% if @project.stls.attached? %>
     <ul>
-      <% @project.stls.each do |stl| %>
+      <% @project.stls.uniq.each do |stl| %>
       <li>
         <%= link_to stl.filename, rails_blob_path(stl, disposition: 'attachment'), class: "btn btn-outline-primary" %>
       </li>
