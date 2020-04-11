@@ -19,5 +19,6 @@ module Myapp
     # the framework and any gems in your application.
 
     config.i18n.default_locale = :fr
+    config.encoding = "utf-8"
   end
 end
