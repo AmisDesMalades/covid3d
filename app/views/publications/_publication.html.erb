@@ -1,21 +1,22 @@
-<div class="card bg-light">
-  <div class="card-header text-muted">
-    <% if policy(publication).update? %>
-    <%= link_to edit_publication_path(publication), class: 'btn btn-primary btn-sm' do %>
-    <%= fa_icon('edit') %>
-    <% end %>
-    <% end %>
-    <%= publication.date %>
-
-  </div>
-  <div class="card-body text-dark">
-    <h5 class="card-title">
-      <%= link_to publication.link do %>
-      <%= publication.title %>
+<div class="col mb-4">
+  <div class="card bg-light">
+    <div class="card-header text-muted">
+      <% if policy(publication).update? %>
+        <%= link_to edit_publication_path(publication), class: 'btn btn-primary btn-sm' do %>
+          <%= fa_icon('edit') %>
+        <% end %>
       <% end %>
-    </h5>
-    <p class="card-text">
-      <%= publication.comment %>
-    </p>
+      <%= publication.date %>
+    </div>
+    <div class="card-body text-dark">
+      <h5 class="card-title">
+        <%= link_to publication.link do %>
+          <%= publication.title %>
+        <% end %>
+      </h5>
+      <p class="card-text">
+        <%= publication.comment %>
+      </p>
+    </div>
   </div>
 </div>
