@@ -19,8 +19,6 @@ json.technology do
   json.silicone project.silicone
 end
 
-json.images project.images.each do |image|
-
 json.assembly project.assembly
 json.printer_settings project.printer_settings
 json.comments project.comments
