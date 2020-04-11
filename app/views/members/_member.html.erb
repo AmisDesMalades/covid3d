@@ -1,5 +1,6 @@
+# encoding: utf-8
 <li>
   <%= member.name %> -
   <%= member.job %> -
-  <%= mail_to member.name.force_encoding(Encoding::UTF_8), member.email, encode: "hex" %>
+  <%= mail_to member.name, member.email %>
 </li>
