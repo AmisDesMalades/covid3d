@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class ProductDashboard < Administrate::BaseDashboard
+class PublicationDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -8,14 +8,16 @@ class ProductDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
+    image_attachment: Field::HasOne,
+    image_blob: Field::HasOne,
     id: Field::Number,
-    name: Field::String,
-    category: Field::String,
-    validated: Field::String,
+    title: Field::String,
+    date: Field::Date,
     link: Field::String,
-    img: Field::String,
+    comment: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    category: Field::String.with_options(searchable: false),
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -24,34 +26,38 @@ class ProductDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
+  image_attachment
+  image_blob
   id
-  name
-  category
-  validated
+  title
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
+  image_attachment
+  image_blob
   id
-  name
-  category
-  validated
+  title
+  date
   link
-  img
+  comment
   created_at
   updated_at
+  category
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-  name
-  category
-  validated
+  image_attachment
+  image_blob
+  title
+  date
   link
-  img
+  comment
+  category
   ].freeze
 
   # COLLECTION_FILTERS
@@ -66,10 +72,10 @@ class ProductDashboard < Administrate::BaseDashboard
   #   }.freeze
   COLLECTION_FILTERS = {}.freeze
 
-  # Overwrite this method to customize how products are displayed
+  # Overwrite this method to customize how publications are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(product)
-  #   "Product ##{product.id}"
+  # def display_resource(publication)
+  #   "Publication ##{publication.id}"
   # end
 end

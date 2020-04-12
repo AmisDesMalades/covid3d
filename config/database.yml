@@ -24,7 +24,7 @@ default: &default
 development:
   <<: *default
   host: localhost
-  database: race2breathe_development
+  database: covid3d_development
   username: postgres
   port: 5433
   #password: <%= ENV['DATABASE_DEV_PASSWORD'] %>
@@ -33,7 +33,7 @@ development:
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: myapp
+  # username: myapp
 
   # The password associated with the postgres role (username).
   #password:
@@ -61,9 +61,8 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: race2breathe_test
+  database: covid3d_test
   host: localhost
-  database: race2breathe_development
   username: postgres
   port: 5433
   password: <%= ENV['DATABASE_TEST_PASSWORD'] %>

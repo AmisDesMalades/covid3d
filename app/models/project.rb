@@ -1,9 +1,8 @@
 class Project < ApplicationRecord
   extend FriendlyId
-  friendly_id :name, use: [:slugged, :history]
-  enum technology: [:fdm, :advanced_printing, :cnc, :lasercutter, :electronics, :silicone]
-  enum status: ["Prototype en cours", "Prototype validé clinique", "Prototype validé AGEPS"]
-  enum category: ["Comfort & protection", "Dispositif médical", "Groupe de travail"]
+  friendly_id :name, use: %i[slugged history]
+  enum validation: %i[prototype clinical_validation validated]
+  enum category: %i[comfort medical_device workgroup]
 
   has_and_belongs_to_many :members
   has_one_attached :thumbnail
@@ -14,7 +13,6 @@ class Project < ApplicationRecord
 
   def compile_markdown
     return unless self.description.present?
-
     self.description_html =
       Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true).
       render(self.description)

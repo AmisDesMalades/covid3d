@@ -507,7 +507,6 @@ DEPENDENCIES
   rails-i18n
   rails_best_practices
   redcarpet (~> 3.5)
-  redis (~> 4.0)
   rubocop-rails
   sass-rails (>= 6)
   selenium-webdriver

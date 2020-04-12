@@ -1,0 +1,26 @@
+<div class="card border-dark">
+  <div class="card-header">Description</div>
+  <div class="card-body">
+    <%== project.description_html %>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <b>Validation: </b>
+        <%= project[:validation] %>
+      </li>
+      <li class="list-group-item">
+        <b>Catégorie: </b>
+        <%= project[:category] %>
+      </li>
+      <li class="list-group-item">
+        <b>License: </b>
+        <%= project.license %>
+      </li>
+    </ul>
+    <p class="card-text">
+      <small class="text-muted">
+        Mise à jour le <%= project.updated_at %>
+      </small>
+    </p>
+  </div>
+</div>
+

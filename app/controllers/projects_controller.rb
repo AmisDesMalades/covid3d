@@ -1,13 +1,15 @@
+# frozen_string_literal: true
+
 class ProjectsController < ApplicationController
-  before_action :set_project, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_project, only: %i[show edit update destroy]
+  before_action :authenticate_user!, except: %i[index show]
 
   # GET /projects
   # GET /projects.json
   def index
     @projects = policy_scope(Project)
-      .with_attached_images
-      .with_attached_stls
+                .with_attached_images
+                .with_attached_stls
   end
 
   # GET /projects/1
@@ -16,7 +18,7 @@ class ProjectsController < ApplicationController
     authorize @project
 
     if request.path != project_path(@project)
-      return redirect_to @project, :status => :moved_permanently
+      redirect_to @project, status: :moved_permanently
     end
   end
 
@@ -95,35 +97,40 @@ class ProjectsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_project
-      @project = policy_scope(Project).friendly.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def project_params
-      params.require(:project).permit(
-        :name, 
-        :description, 
-        :description_html, 
-        :short_description, 
-        :plural_name, 
-        :assembly, 
-        :technology, 
-        :printer_settings, 
-        :url, 
-        :comments, 
-        :status, 
-        :thumbnail,
-        :fdm,
-        :advanced,
-        :cnc,
-        :lasercutter,
-        :electronics,
-        :silicone,
-        images: [], 
-        stls: [], 
-        member_ids: []
-      )
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_project
+    @project = policy_scope(Project).friendly.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def project_params
+    params.require(:project).permit(
+      :name,
+      :plural_name,
+      :description,
+      :description_html,
+      :short_description,
+      :status,
+      :validation,
+      :category,
+      :published,
+      :assembly,
+      :printer_settings,
+      :comments,
+      :fdm,
+      :advanced,
+      :cnc,
+      :lasercutter,
+      :electronics,
+      :silicone,
+      :author,
+      :author_url,
+      :website,
+      :license,
+      images: [],
+      stls: [],
+      member_ids: []
+    )
+  end
 end
