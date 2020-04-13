@@ -1,0 +1,63 @@
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1>Flux de travail</h1>
+    <p class="lead text-muted">
+    </p>
+  </div>
+</section>
+
+<div class="row">
+  <div class="col-sm-12">
+    <p>
+      La ferme de Port-Royal est la seule structure en France habilitée à produire des dispositifs médicaux de crise en
+      réponse à l'épidémie de Covid19.
+    </p>
+    <p>
+      Cette production n'est possible uniquement lorsque le dispositif en question n'est pas disponible et ne peut être
+      substitué par un dispositif existant.
+    </p>
+    <p>
+      Dans ce cas de figure, l'équipe de 3DCovid élabore un prototype, avec l'aide de Jogl.io dans les cas complexes, et
+      soumet ses prototypes à une double validation :
+    <ul>
+      <li>validation clinique par un service de l'APHP avec délivrance d'un certificat</li>
+      <li>validation pharmacologique par l'AGEPS</li>
+    </ul>
+    </p>
+    <p>
+      A l'issue de ce processus, un avis est émis par l'AGEPS, qui autorise ou non la mise en production. Le modèle est
+      alors chargé sur le site 3DCovid.org et diffusé sur emergency.io afin qu'il soit disponible pour le plus grand
+      nombre.
+    </p>
+    <p>
+      La procédure de soumission du prototype pour validation pharmacologique par l'AGEPS comprend, pour chaque
+      dispositif médical :
+    <ul>
+      <li>
+        un protocole de fabrication, détaillant la procédure de contrôle qualité, les méthodes de suivi de lot, le
+        nettoyage
+        / la stérilisation, le conditionnement et la distribution
+      </li>
+      <li>
+        un protocole de gestion des risques
+      </li>
+      <li>
+        un dossier technique, comprenant les données du fabricant sur les propriétés des résines utilisées et les
+        caractéristiques des machines
+      </li>
+      <li>
+        un descriptif de la plateforme avec un plan de la répartition des machines
+      </li>
+      <li>
+        une notice d'assemblage
+      </li>
+      <li>
+        le rapport d'évaluation clinique
+      </li>
+    </ul>
+    </p>
+    <hr/>
+    <h2>Diagramme</h2>
+    <%= image_tag("workflow/fsm.png", style: "width: 100%;", alt: "Diagramme FSM") %>
+  </div>
+</div>

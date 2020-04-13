@@ -85,6 +85,12 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def delete_image
+    attachment = ActiveStorage::Attachment.find(params[:id])
+    attachment.purge # or use purge_later
+    redirect_back(fallback_location: projects_path)
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.

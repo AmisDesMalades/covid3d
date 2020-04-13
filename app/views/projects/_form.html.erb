@@ -220,12 +220,15 @@
       <%= form.file_field :images, multiple: true, class: 'form-control' %>
     </div>
   </div>
+
   <div class="row">
     <% @project.images.each_with_index do |image, index| %>
-      <%= image_tag(image.variant(resize_to_limit: [400, 300]).processed, class: "img-thumbnail") %>
+      <div>
+        <%= image_tag(image.variant(resize_to_limit: [400, 300]).processed, class: "img-thumbnail") %>
+        <%= link_to 'Remove', delete_image_project_path(id: project.id, image_id: image.id), method: :delete, data: {confirm: 'Are you sure?'} %>
+      </div>
     <% end %>
   </div>
-
 
   <div class="form-group">
     <% if project.persisted? %>

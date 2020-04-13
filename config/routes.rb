@@ -14,7 +14,11 @@ Rails.application.routes.draw do
   end
 
   resources :publications
-  resources :projects
+  resources :projects do
+    member do
+      delete :delete_image
+    end
+  end
   resources :members
   get '/contact', to: 'home#contact'
   get '/soignant', to: 'home#soignant'
@@ -24,6 +28,8 @@ Rails.application.routes.draw do
   get '/autres_demandes', to: 'home#autres_demandes'
   get '/infrastructure', to: 'home#infrastructure'
   get '/remerciements', to: 'home#remerciements'
+  get '/workflow', to: 'home#workflow'
+  get '/collaboration', to: 'home#collaboration'
 
   authenticate :user, lambda { |u| u.admin? } do
     mount Sidekiq::Web => '/sidekiq'

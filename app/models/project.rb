@@ -33,9 +33,9 @@ class Project < ApplicationRecord
     if self.prototype?
       return "En cours de prototypage"
     elsif self.clinical_validation?
-      return "Validation clinique"
+      return "Validation clinique effectué"
     elsif self.validated?
-      return "Validation finale"
+      return "Validation finale effectué"
     end
   end
 end

@@ -25,3 +25,10 @@
     <%= render partial: "publication", locals: {publication: publication} %>
   <% end %>
 </div>
+
+<h2>Autres</h2>
+<div class="row row-cols-1 row-cols-md-3">
+  <% @publications.each do |publication| %>
+    <%= render partial: "publication", locals: {publication: publication} %>
+  <% end %>
+</div>
