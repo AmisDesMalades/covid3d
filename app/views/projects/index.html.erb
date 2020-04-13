@@ -35,10 +35,3 @@
   <% end %>
 </div>
 
-<hr>
-<h2>Autres</h2>
-<div class="card-columns">
-  <% @projects.each_with_index do |project, index| %>
-    <%= render partial: "card", locals: {project: project} %>
-  <% end %>
-</div>
