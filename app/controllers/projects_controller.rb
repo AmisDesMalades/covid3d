@@ -39,17 +39,6 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     authorize @project
 
-    @project.thumbnail.attach(params[:project][:thumbnail])
-    @project.images.attach(params[:project][:images])
-    @project.stls.attach(params[:project][:stls])
-
-    params[:project][:member_ids].each do |member_id|
-      unless member_id.empty?
-        member = Member.find(member_id)
-        @project.members << member
-      end
-    end
-
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }

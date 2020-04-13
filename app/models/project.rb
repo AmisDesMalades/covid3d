@@ -35,7 +35,7 @@ class Project < ApplicationRecord
     elsif self.clinical_validation?
       return "Validation clinique"
     elsif self.validated?
-      return "Validation AGEPS"
+      return "Validation finale"
     end
   end
 end
