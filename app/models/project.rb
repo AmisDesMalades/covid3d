@@ -18,4 +18,24 @@ class Project < ApplicationRecord
       Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true).
       render(self.description)
   end
+
+  def category_text
+    if self.comfort?
+      return "Matériel de protection et de comfort"
+    elsif self.medical_device?
+      return "Dispositif médical"
+    elsif self.workgroup?
+      return "Recherche & Developement"
+    end
+  end
+
+  def validation_text
+    if self.prototype?
+      return "En cours de prototypage"
+    elsif self.clinical_validation?
+      return "Validation clinique"
+    elsif self.validated?
+      return "Validation AGEPS"
+    end
+  end
 end
