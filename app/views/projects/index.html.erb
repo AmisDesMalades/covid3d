@@ -1,10 +1,10 @@
 <section class="jumbotron text-center">
   <div class="container">
-    <h1>Projets
+    <h1>Catalogue de projets
       <% if policy(Project.new).create? %>
-      <%= link_to new_project_path, class: 'btn btn-primary' do %>
-      <%= fa_icon("plus") %>
-      <% end %>
+        <%= link_to new_project_path, class: 'btn btn-primary' do %>
+          <%= fa_icon("plus") %>
+        <% end %>
       <% end %>
     </h1>
     <p class="lead text-muted">
@@ -12,8 +12,25 @@
   </div>
 </section>
 
+<h2>Matériel de protection et de comfort</h2>
 <div class="card-columns">
-  <% @projects.each_with_index do |project, index| %>
-  <%= render partial: "card", locals: {project: project} %>
+  <% @projects.comfort.each_with_index do |project, index| %>
+    <%= render partial: "card", locals: {project: project} %>
+  <% end %>
+</div>
+
+<hr>
+<h2>Equipement médical</h2>
+<div class="card-columns">
+  <% @projects.medical_device.each_with_index do |project, index| %>
+    <%= render partial: "card", locals: {project: project} %>
+  <% end %>
+</div>
+
+<hr>
+<h2>Recherche et dévelopement</h2>
+<div class="card-columns">
+  <% @projects.workgroup.each_with_index do |project, index| %>
+    <%= render partial: "card", locals: {project: project} %>
   <% end %>
 </div>
