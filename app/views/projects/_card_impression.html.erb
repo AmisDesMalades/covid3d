@@ -1,0 +1,79 @@
+<div class="card">
+  <h4 class="card-header text-center">Impression 3D</h4>
+  <div class="card-body">
+    <h5 class="card-title">STLs</h5>
+    <% if @project.stls.attached? %>
+      <ul class="list-unstyled">
+        <% @project.stls.each do |stl| %>
+          <li>
+            <%= link_to rails_blob_path(stl, disposition: 'attachment'), class: "btn btn-outline-primary" do %>
+              <%= stl.filename %>
+              <%= fa_icon 'download' %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      Aucun STL n'a encore été publié.
+    <% end %>
+    <br/>
+    <h5 class="card-title">Paramètres d'impression</h5>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <b>Matériel recommandé: </b>
+        <%= project.material %>
+      </li>
+      <li class="list-group-item">
+        <b>Hauteur de strate: </b>
+        <%= project.layer_size %>mm
+      </li>
+      <li class="list-group-item">
+        <b>Densité de remplissage: </b>
+        <%= project.fill_density %>%
+      </li>
+      <li class="list-group-item">
+        <b>Supports structurels: </b>
+        <%= project.support ? 'Oui' : 'Non' %>
+      </li>
+      <li class="list-group-item">
+        <b>Base: </b>
+        <%= project.raft ? 'Oui' : 'Non' %>
+      </li>
+      <li class="list-group-item">
+        <b>Temps estimé par pièce: </b>
+        <%= project.estimated_time %>mn
+      </li>
+    </ul>
+    <br/>
+    <h5 class="card-title">Technologies utilisées</h5>
+    <ul>
+      <% if @project.fdm %>
+        <li>FDM</li>
+      <% end %>
+      <% if @project.advanced %>
+        <li>Advanced printer</li>
+      <% end %>
+      <% if @project.cnc %>
+        <li>CNC</li>
+      <% end %>
+      <% if @project.lasercutter %>
+        <li>Lasercutter</li>
+      <% end %>
+      <% if @project.electronics %>
+        <li>Electronics</li>
+      <% end %>
+      <% if @project.silicone %>
+        <li>Silicone</li>
+      <% end %>
+    </ul>
+    <% if @project.printer_settings.present? %>
+      <h5 class="card-title">Informations complémentaires:</h5>
+      <%= @project.printer_settings %>
+    <% end %>
+    <% if @project.assembly.present? %>
+      <h5 class="card-title">Assemblage</h5>
+      <%= @project.assembly %>
+    <% end %>
+
+  </div>
+</div>

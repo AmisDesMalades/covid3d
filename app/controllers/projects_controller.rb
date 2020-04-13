@@ -8,8 +8,8 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = policy_scope(Project)
-                .with_attached_images
-                .with_attached_stls
+                    .with_attached_images
+                    .with_attached_stls
   end
 
   # GET /projects/1
@@ -106,31 +106,37 @@ class ProjectsController < ApplicationController
   # Only allow a list of trusted parameters through.
   def project_params
     params.require(:project).permit(
-      :name,
-      :plural_name,
-      :description,
-      :description_html,
-      :short_description,
-      :status,
-      :validation,
-      :category,
-      :published,
-      :assembly,
-      :printer_settings,
-      :comments,
-      :fdm,
-      :advanced,
-      :cnc,
-      :lasercutter,
-      :electronics,
-      :silicone,
-      :author,
-      :author_url,
-      :website,
-      :license,
-      images: [],
-      stls: [],
-      member_ids: []
+        :name,
+        :plural_name,
+        :description,
+        :description_html,
+        :short_description,
+        :status,
+        :validation,
+        :category,
+        :published,
+        :assembly,
+        :printer_settings,
+        :comments,
+        :fdm,
+        :advanced,
+        :cnc,
+        :lasercutter,
+        :electronics,
+        :silicone,
+        :author,
+        :author_url,
+        :website,
+        :license,
+        :material,
+        :layer_size,
+        :fill_density,
+        :support,
+        :raft,
+        :estimated_time,
+        images: [],
+        stls: [],
+        member_ids: []
     )
   end
 end

@@ -47,82 +47,23 @@
   </div>
 </div>
 
-<br />
+<br/>
 <div class="row">
   <div class="col">
-    <%= render partial: "card_author", locals: {project: @project} %>
+    <%= render partial: "card_impression", locals: {project: @project} %>
   </div>
   <div class="col">
-
+    <%= render partial: "card_team", locals: {project: @project} %>
   </div>
 </div>
 
-<div class="row">
-  <div class="col">
-    <h3>Impression 3D</h3>
-    <div class="bg-light">
-      <h4>Equipe du projet</h4>
-      <% @project.members.uniq.each do |member| %>
-        <%= render member %>
-      <% end %>
+<% if @project.comments? %>
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <h3>Commentaires</h3>
+        <%= @project.comments %>
+      </div>
     </div>
-    <h4>Technologies utilisées</h4>
-    <ul>
-      <% if @project.fdm %>
-        <li>FDM</li>
-      <% end %>
-      <% if @project.advanced %>
-        <li>Advanced printer</li>
-      <% end %>
-      <% if @project.cnc %>
-        <li>CNC</li>
-      <% end %>
-      <% if @project.lasercutter %>
-        <li>Lasercutter</li>
-      <% end %>
-      <% if @project.electronics %>
-        <li>Electronics</li>
-      <% end %>
-      <% if @project.silicone %>
-        <li>Silicone</li>
-      <% end %>
-    </ul>
-
-    <h4>STLs</h4>
-    <% if @project.stls.attached? %>
-      <ul>
-        <% @project.stls.uniq.each do |stl| %>
-          <li>
-            <%= link_to stl.filename, rails_blob_path(stl, disposition: 'attachment'), class: "btn btn-outline-primary" %>
-          </li>
-        <% end %>
-      </ul>
-    <% else %>
-      Aucun STL n'a encore été publié.
-    <% end %>
-
-    <% if @project.category.present? %>
-      <h4>Category</h4>
-      <%= @project.category %>
-    <% end %>
-
-    <% if @project.printer_settings.present? %>
-      <h4>Réglages d'imprimante</h4>
-      <%= @project.printer_settings %>
-    <% end %>
-
-    <% if @project.assembly.present? %>
-      <h4>Assemblage</h4>
-      <%= @project.assembly %>
-    <% end %>
-
   </div>
-</div>
-
-<hr/>
-<div class="row">
-  <div class="col">
-    <h3>Commentaires</h3>
-    <%= @project.comments %>
-  </div>
-</div>
+<% end %>

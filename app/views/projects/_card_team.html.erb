@@ -1,0 +1,27 @@
+<div class="card border-light">
+  <h4 class="card-header text-center">Equipe</h4>
+  <div class="card-body">
+    <h5 class="card-title">Groupe de travail: </h5>
+    <ul class="list-group list-group-flush">
+      <% project.members.each do |member| %>
+        <li class="list-group-item">
+          <%= member.name %>
+        </li>
+      <% end %>
+    </ul>
+    <br/>
+    <h5 class="card-title">Designer</h5>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <b>Auteur: </b>
+        <%= project.author %>
+      </li>
+      <% if project.author_url %>
+        <li class="list-group-item">
+          <b>Site Web de l'auteur: </b>
+          <%= link_to project.author_url, project.author_url %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

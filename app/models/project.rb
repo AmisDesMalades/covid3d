@@ -3,6 +3,7 @@ class Project < ApplicationRecord
   friendly_id :name, use: %i[slugged history]
   enum validation: %i[prototype clinical_validation validated]
   enum category: %i[comfort medical_device workgroup]
+  enum material: %i[ABS PLA ASA PETG Any]
 
   has_and_belongs_to_many :members
   has_one_attached :thumbnail

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_12_161032) do
+ActiveRecord::Schema.define(version: 2020_04_12_234636) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -122,6 +122,12 @@ ActiveRecord::Schema.define(version: 2020_04_12_161032) do
     t.boolean "published"
     t.integer "category"
     t.integer "validation"
+    t.integer "material"
+    t.float "layer_size"
+    t.integer "fill_density"
+    t.boolean "support"
+    t.boolean "raft"
+    t.integer "estimated_time"
   end
 
   create_table "publications", force: :cascade do |t|
