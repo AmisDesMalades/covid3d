@@ -1,16 +1,19 @@
-json.id project.id 
+json.id project.id
 json.name project.name
 json.description project.description
 json.short_description project.short_description
-json.status project.status
 json.created_at project.created_at
 json.updated_at project.updated_at
+json.category project.category
+json.validation project.validation
+json.license project.license
+json.assembly project.assembly
+json.printer_settings project.printer_settings
+json.comments project.comments
 
-# if project.thumbnail.attached?
-#   json.thumbnail project.thumbnail.service_url
-# end
+json.image project.image_url
 
-json.technology do 
+json.technology do
   json.fdm project.fdm
   json.advanced project.advanced
   json.cnc project.cnc
@@ -18,9 +21,5 @@ json.technology do
   json.electronics project.electronics
   json.silicone project.silicone
 end
-
-json.assembly project.assembly
-json.printer_settings project.printer_settings
-json.comments project.comments
 
 json.url project_url(project, format: :json)

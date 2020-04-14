@@ -38,4 +38,8 @@ class Project < ApplicationRecord
       return "Validation finale effectuée"
     end
   end
+
+  def image_url
+    Rails.application.routes.url_helpers.rails_blob_path(self.images.first, only_path: true) if self.images.attached?
+  end
 end
