@@ -15,8 +15,8 @@ class Project < ApplicationRecord
   def compile_markdown
     return unless self.description.present?
     self.description_html =
-      Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true).
-      render(self.description)
+        Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true).
+            render(self.description)
   end
 
   def category_text
@@ -40,6 +40,14 @@ class Project < ApplicationRecord
   end
 
   def image_url
-    Rails.application.routes.url_helpers.rails_blob_path(self.images.first, only_path: true) if self.images.attached?
+    'https://covid3d.org' + Rails.application.routes.url_helpers.rails_blob_path(self.images.first, only_path: true) if self.images.attached?
+  end
+
+  def stls_url
+    urls = []
+    self.stls.each do |stl|
+      urls << 'https://covid3d.org' + Rails.application.routes.url_helpers.rails_blob_path(stl, only_path: true)
+    end
+    return urls
   end
 end

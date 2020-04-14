@@ -12,6 +12,7 @@ json.printer_settings project.printer_settings
 json.comments project.comments
 
 json.image project.image_url
+json.stls project.stls_url
 
 json.technology do
   json.fdm project.fdm
