@@ -25,7 +25,7 @@ class Project < ApplicationRecord
     elsif self.medical_device?
       return "Dispositif médical"
     elsif self.workgroup?
-      return "Recherche & Developement"
+      return "Recherche & Developpement"
     end
   end
 
