@@ -27,6 +27,7 @@ gem 'geocoder'
 gem 'gmaps4rails'
 gem 'meta-tags'
 gem 'pundit'
+gem 'newrelic_rpm'
 
 # Use Active Storage variant
 gem "aws-sdk-s3", require: false
