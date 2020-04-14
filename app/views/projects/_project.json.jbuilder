@@ -14,6 +14,12 @@ json.comments project.comments
 json.image project.image_url
 json.stls project.stls_url
 
+json.printer_config do
+  json.material project.material
+  json.layer_size project.layer_size
+  json.fill_density project.fill_density.to_s + '%'
+end
+
 json.technology do
   json.fdm project.fdm
   json.advanced project.advanced
