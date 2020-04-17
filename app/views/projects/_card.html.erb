@@ -1,14 +1,14 @@
 <div class="card shadow-sm">
-  <%= link_to project do %>
-    <% if project.images.attached? %>
-      <%= image_tag(project.images.first.variant(resize_to_fit: [400, 300]).processed, class: "card-img-top", alt: project.short_description) %>
-    <% else %>
-      <%= image_tag("cards/carte-autres-43.png", class: "card-img-top", alt: project.short_description) %>
-    <% end %>
-    <div class="card-footer">
-      <h5 class="card-title text-center">
-        <%= project.name %>
-      </h5>
-    </div>
+
+  <% if project.images.attached? %>
+    <%= image_tag(project.images.first.variant(resize_to_fit: [400, 300]).processed, class: "card-img-top", alt: project.short_description) %>
+  <% else %>
+    <%= image_tag("cards/carte-autres-43.png", class: "card-img-top", alt: project.short_description) %>
   <% end %>
+
+  <div class="card-header">
+    <%= link_to project, class: "stretched-link" do %>
+      <%= project.name %>
+    <% end %>
+  </div>
 </div>

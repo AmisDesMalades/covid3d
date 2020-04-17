@@ -12,26 +12,29 @@
   </div>
 </section>
 
-<h2>Matériel de protection et de confort</h2>
+<h2>
+  <%= fa_icon("user-nurse") %>
+  Matériel de protection et de confort
+</h2>
 <div class="card-columns">
-  <% @projects.comfort.each_with_index do |project, index| %>
-    <%= render partial: "card", locals: {project: project} %>
-  <% end %>
+  <%= render partial: '/projects/card', collection: @projects.comfort, as: :project, cached: true %>
 </div>
 
 <hr>
-<h2>Equipement médical</h2>
+<h2>
+  <%= fa_icon("briefcase-medical") %>
+  Equipement médical
+</h2>
 <div class="card-columns">
-  <% @projects.medical_device.each_with_index do |project, index| %>
-    <%= render partial: "card", locals: {project: project} %>
-  <% end %>
+  <%= render partial: '/projects/card', collection: @projects.medical_device, as: :project, cached: true %>
 </div>
 
 <hr>
-<h2>Recherche et dévelopement</h2>
+<h2>
+  <%= fa_icon("flask") %>
+  Recherche & développement
+</h2>
 <div class="card-columns">
-  <% @projects.workgroup.each_with_index do |project, index| %>
-    <%= render partial: "card", locals: {project: project} %>
-  <% end %>
+  <%= render partial: '/projects/card', collection: @projects.workgroup, as: :project, cached: true %>
 </div>
 

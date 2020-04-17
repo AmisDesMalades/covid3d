@@ -19,24 +19,7 @@
 <div class="table-responsive">
   <table class="table table-hover">
     <tbody>
-      <% @members.each do |member| %>
-
-      <%= content_tag :tr, id: dom_id(member), class: dom_class(member) do %>
-      <td><b><%= member.name %></b></td>
-      <td><%= member.job %></td>
-      <td><%= mail_to member.email, member.email, encode: "hex" %></td>
-      <td><%= member.comment %></td>
-
-      <% if policy(member).update? %>
-      <td>
-        <%= link_to edit_member_path(member), class: 'btn btn-primary btn-sm' do %>
-        <%= fa_icon('edit') %>
-        <% end %>
-      </td>
-      <% end %>
-      <% end %>
-      <% end %>
-
+      <%= render partial: 'members/member_row', collection: @members, as: :member, cached: true %>
     </tbody>
   </table>
 </div>
