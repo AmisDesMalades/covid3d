@@ -14,7 +14,7 @@
     </p>
     <p>
       Cette production n'est possible uniquement lorsque le dispositif en question n'est pas disponible et ne peut être
-      substitué par un dispositif existant.
+      substitué par un dispositif existant. La disponibilité des dispositifs est systématiquement vérifiée avec l'AGEPS.
     </p>
     <p>
       Dans ce cas de figure, l'équipe de 3DCovid élabore un prototype, avec l'aide de Jogl.io dans les cas complexes, et
@@ -25,38 +25,77 @@
     </ul>
     </p>
     <p>
-      A l'issue de ce processus, un avis est émis par l'AGEPS, qui autorise ou non la mise en production. Le modèle est
-      alors chargé sur le site 3DCovid.org et diffusé sur emergency.io afin qu'il soit disponible pour le plus grand
-      nombre.
+      A noter que la validation clinique peut comprendre, selon les dispositifs, des tests d'étanchéité et des tests
+      biomécaniques, réalisés avec des laboratoires partenaires dans diverses institutions de recherche de la région
+      Île-de-France (APHP, ENSAM, ENSTA, Université de Paris). Cette phase de validation comprend généralement plusieurs
+      aller-retours avec la fabrication de prototypes de qualité croissante. Nous utilisons également un protocole avec
+      scanner 3D des pièces avant et après toute procédure appliquée aux dispositifs, tel que le post-traitement et la
+      désinfection, afin de quantifier d'éventuelles déformations.
     </p>
     <p>
-      La procédure de soumission du prototype pour validation pharmacologique par l'AGEPS comprend, pour chaque
+      A l'issue de ce processus, le dispositif est soumis à l'AGEPS, qui émet un avis et soumet le dossier à l'ANSM. La
+      production commence en fonction de la décision finale de ces deux organismes. En parallèle, le modèle 3D est
+      chargé sur le site 3DCovid.org et diffusé sur emergency.io afin qu'il soit disponible pour le plus grand nombre,
+      libre de droits.
+    </p>
+    <p>
+      Plus précisément, la procédure de soumission du prototype pour validation pharmacologique comprend, pour chaque
       dispositif médical :
     <ul>
       <li>
-        un protocole de fabrication, détaillant la procédure de contrôle qualité, les méthodes de suivi de lot, le
-        nettoyage
-        / la stérilisation, le conditionnement et la distribution
+        un protocole de fabrication, détaillant la procédure de contrôle qualité, les méthodes de suivi de lot, le nettoyage / la stérilisation, le conditionnement et la distribution
       </li>
       <li>
-        un protocole de gestion des risques
+        un protocole de gestion des risques qui comprend une analyse des risques liés aux matériaux, au design, à la fabrication, à l'utilisation et à la désinfection/stérilisation - ces risques sont répertoriés selon une échelle de gravité et de fréquence afin d’en ressortir des étapes préventives pour les diminuer dans un seuil acceptable
       </li>
       <li>
-        un dossier technique, comprenant les données du fabricant sur les propriétés des résines utilisées et les
-        caractéristiques des machines
+        un dossier technique, comprenant les données du fabricant sur les propriétés des résines utilisées et les caractéristiques des machines
       </li>
       <li>
         un descriptif de la plateforme avec un plan de la répartition des machines
       </li>
       <li>
-        une notice d'assemblage
+        une notice d'assemblage et d'utilisation
       </li>
       <li>
         le rapport d'évaluation clinique
       </li>
     </ul>
     </p>
-    <hr/>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-sm-12">
+    <h2 class="text-center">Nettoyage</h2>
+    <p>
+      Pour nettoyer les dispositifs, nous travaillons avec la Pharmacie Centrale de l'Hôpital Cochin et utilisons des
+      laveurs désinfecteurs d’instruments (LDI) 86.68 de la société GETINGE avec un cycle spécifique qualifié et
+      répondant à la Norme EN ISO 15883-1 [Laveurs désinfecteurs – Partie 1 : Exigences générales, définitions et essais
+      (ISO/DIS 15883-1 : 2006)].
+    </p>
+    <p>
+      Les dispositifs sont nettoyés selon le cycle de lavage suivant :
+    <ul>
+      <li>Rinçage à l’eau adoucie froide 20°C à un TH < 7°F de 1 min</li>
+      <li>Lavage à l’eau adoucie à 55°C pendant 5 min avec le détergent NEODISHER MEDICLEAN FORTE à 0.4% de la société
+        Dr WEIGERT
+      </li>
+      <li>Rinçage à l’eau adoucie froide 20°C à un TH < 7°F de 2 min</li>
+      <li>Désinfection thermique à l’eau osmosée (résistivité < 15 µS/cm²/20°C) pour un plateau de 10 minutes à 70°C
+        avec
+        ajout d’un tensio-actif de séchage (NEODISHER MEDIKLAR SPECIAL de la société Dr WEIGERT) à 0.03%
+      </li>
+      <li>Séchage de 30 min à 70°C</li>
+    </ul>
+    La traçabilité des étapes de lavage est effectuée avec le logiciel T-Doc (GETINGE).
+    </p>
+  </div>
+</div>
+
+<hr>
+<div class="row">
+  <div class="col-sm-12">
     <h2 class="text-center">Diagramme du flux de travail</h2>
     <%= image_tag("workflow/fsm.png", style: "width: 100%;", alt: "Diagramme FSM") %>
   </div>
