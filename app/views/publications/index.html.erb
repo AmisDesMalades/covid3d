@@ -12,16 +12,23 @@
   </div>
 </section>
 
+<h2>Sélection presse</h2>
+<div class="row row-cols-1 row-cols-md-3">
+  <% @featured.each do |publication| %>
+  <%= render publication %>
+  <% end %>
+</div>
+
 <h2>Presse</h2>
 <div class="row row-cols-1 row-cols-md-3">
   <% @publications.presse.each do |publication| %>
-  <%= render partial: "publication", locals: {publication: publication} %>
+    <%= render publication %>
   <% end %>
 </div>
 
 <h2>Publications</h2>
 <div class="row row-cols-1 row-cols-md-3">
   <% @publications.publication.each do |publication| %>
-    <%= render partial: "publication", locals: {publication: publication} %>
+    <%= render publication %>
   <% end %>
 </div>

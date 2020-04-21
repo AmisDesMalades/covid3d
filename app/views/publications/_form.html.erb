@@ -50,6 +50,16 @@
     </div>
   </div>
 
+  <div class="form-group row">
+    <%= form.label :featured, class: 'col-sm-2 col-form-label' %>
+    <div class="col-sm-10">
+      <div class="form-check form-check-inline">
+        <%= form.check_box :featured, class: 'form-check-input', id: 'check1' %>
+        <label class="form-check-label" for="check1">En vedette</label>
+      </div>
+    </div>
+  </div>
+
   <div class="form-group">
     <% if publication.persisted? %>
       <div class="float-right">

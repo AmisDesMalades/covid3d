@@ -6,6 +6,7 @@ class PublicationsController < ApplicationController
   # GET /publications.json
   def index
     @publications = Publication.all
+    @featured = Publication.where(featured: true)
   end
 
   # GET /publications/1
@@ -76,6 +77,6 @@ class PublicationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def publication_params
-      params.require(:publication).permit(:title, :date, :link, :comment, :category, :image)
+      params.require(:publication).permit(:title, :date, :link, :comment, :category, :featured, :image)
     end
 end

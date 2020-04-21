@@ -1,5 +1,5 @@
 class Announcement < ApplicationRecord
-  TYPES = %w{ presse production validation general }
+  TYPES = %w[presse production validation general].freeze
 
   after_initialize :set_defaults
 
