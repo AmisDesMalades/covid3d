@@ -10,5 +10,8 @@
     <%= link_to project, class: "stretched-link" do %>
       <%= project.name %>
     <% end %>
+    <p class="text-muted small">
+      <%= project.validation_text %>
+    </p>
   </div>
 </div>

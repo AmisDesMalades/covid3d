@@ -15,15 +15,16 @@
         <li class="nav-item">
           <%= link_to "Projets", projects_path, class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to "Infrastructure", infrastructure_path, class: "nav-link" %>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Structure</a>
+          <div class="dropdown-menu">
+            <%= link_to "Ferme d'impression", infrastructure_path, class: "dropdown-item" %>
+            <%= link_to "Flux de travail", workflow_path, class: "dropdown-item" %>
+            <%= link_to "Collaboration", collaboration_path, class: "dropdown-item" %>
+          </div>
         </li>
-        <li class="nav-item">
-          <%= link_to "Flux de travail", workflow_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Collaboration", collaboration_path, class: "nav-link" %>
-        </li>
+
         <li class="nav-item">
           <%= link_to "Nouvelles", announcements_path, class: "nav-link" %>
         </li>
@@ -35,7 +36,7 @@
         </li>
         <li class="nav-item">
           <%- if current_user.try(:admin) %>
-          <%= link_to "Admin", admin_members_path, class: "nav-link text-danger" %>
+            <%= link_to "Admin", admin_members_path, class: "nav-link text-danger" %>
           <% end %>
         </li>
       </ul>

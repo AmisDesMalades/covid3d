@@ -1,6 +1,8 @@
 <section class="jumbotron text-center">
   <div class="container">
-    <h1>Catalogue de projets
+    <h1>
+      <%= fa_icon("tasks") %>
+      Catalogue de projets
       <% if policy(Project.new).create? %>
         <%= link_to new_project_path, class: 'btn btn-primary' do %>
           <%= fa_icon("plus") %>

@@ -1,6 +1,7 @@
 <section class="jumbotron text-center">
   <div class="container">
     <h1>
+      <%= fa_icon("user-shield") %>
       Conseil scientifique
       <% if policy(Member.new).create? %>
       <%= link_to new_member_path, class: 'btn btn-primary' do %>
