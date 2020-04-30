@@ -1,0 +1,20 @@
+<tr>
+  <td>
+    <%= link_to publication.link do %>
+      <%= publication.title %>
+    <% end %>
+  </td>
+  <td>
+    <%= publication.date %>
+  </td>
+  <td>
+    <%= publication.comment %>
+  </td>
+  <td>
+    <% if policy(publication).update? %>
+      <%= link_to edit_publication_path(publication), class: 'btn btn-primary btn-sm' do %>
+        <%= fa_icon('edit') %>
+      <% end %>
+    <% end %>
+  </td>
+</tr>

@@ -4,7 +4,7 @@
       <%= fa_icon("newspaper") %>
       Presse & Publications
       <%= link_to new_publication_path, class: 'btn btn-primary' do %>
-      <%= fa_icon('plus') %>
+        <%= fa_icon('plus') %>
       <% end %>
     </h1>
     <p class="lead text-muted">
@@ -13,23 +13,46 @@
   </div>
 </section>
 
-<h2>Sélection presse</h2>
-<div class="row row-cols-1 row-cols-md-3">
-  <% @featured.each do |publication| %>
-  <%= render publication %>
-  <% end %>
+<p>
+  <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapsePresse">
+    Presse
+  </button>
+  <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapsePublication">
+    Publication
+  </button>
+</p>
+
+<div class="collapse.show" id="collapsePresse">
+  <h2>Sélection presse</h2>
+  <div class="row row-cols-1 row-cols-md-3">
+    <% @featured.each do |publication| %>
+      <% cache publication do %>
+        <%= render publication %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <h2>Presse</h2>
+  <table class="table table-responsive">
+    <tbody>
+    <%= render partial: 'publications/publication_row', collection: @publications.presse, as: :publication, cached: true %>
+    </tbody>
+  </table>
 </div>
 
-<h2>Presse</h2>
-<div class="row row-cols-1 row-cols-md-3">
-  <% @publications.presse.each do |publication| %>
-    <%= render publication %>
-  <% end %>
+<div class="collapse" id="collapsePublication">
+  <h2>Publications</h2>
+  <div class="row row-cols-1 row-cols-md-3">
+    <% @publications.publication.each do |publication| %>
+      <% cache publication do %>
+        <%= render publication %>
+      <% end %>
+    <% end %>
+  </div>
 </div>
 
-<h2>Publications</h2>
-<div class="row row-cols-1 row-cols-md-3">
-  <% @publications.publication.each do |publication| %>
-    <%= render publication %>
-  <% end %>
-</div>
+<script>
+    $('.collapse').collapse({
+        toggle: true
+    })
+</script>

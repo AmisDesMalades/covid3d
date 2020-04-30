@@ -5,7 +5,7 @@ class PublicationsController < ApplicationController
   # GET /publications
   # GET /publications.json
   def index
-    @publications = Publication.all
+    @publications = Publication.order("date DESC")
     @featured = Publication.where(featured: true)
   end
 
