@@ -14,15 +14,11 @@
 </section>
 
 <p>
-  <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapsePresse">
-    Presse
-  </button>
-  <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapsePublication">
-    Publication
-  </button>
+  <a class="btn btn-outline-primary" href="#presse">Presse</a>
+  <a class="btn btn-outline-primary" href="#publications">Publications</a>
 </p>
 
-<div class="collapse.show" id="collapsePresse">
+<div id="presse">
   <h2>Sélection presse</h2>
   <div class="row row-cols-1 row-cols-md-3">
     <% @featured.each do |publication| %>
@@ -40,7 +36,7 @@
   </table>
 </div>
 
-<div class="collapse" id="collapsePublication">
+<div id="publications">
   <h2>Publications</h2>
   <div class="row row-cols-1 row-cols-md-3">
     <% @publications.publication.each do |publication| %>
