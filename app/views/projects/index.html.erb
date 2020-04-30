@@ -10,7 +10,8 @@
       <% end %>
     </h1>
     <p class="lead text-muted">
-      Nous travaillons en accord avec les dernières recommandations de l' ANSM concernant l'impression 3D en période de crise COVID3D :
+      Nous travaillons en accord avec les dernières recommandations de l' ANSM concernant l'impression 3D en période de
+      crise COVID3D :
       <%= link_to "Lire le PDF", "/documents/fiche_encadrement.pdf" %>
     </p>
   </div>
@@ -45,3 +46,14 @@
   <%= render partial: '/projects/card', collection: @projects.workgroup, as: :project, cached: true %>
 </div>
 
+<% if @projects.repair.length > 0 %>
+  <hr>
+  <h2>
+    <%= fa_icon("wrench") %>
+    Pièces d'appareils
+  </h2>
+  <br>
+  <div class="card-columns">
+    <%= render partial: '/projects/card', collection: @projects.repair, as: :project, cached: true %>
+  </div>
+<% end %>
