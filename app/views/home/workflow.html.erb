@@ -22,10 +22,10 @@
     <p>
       Dans ce cas de figure, l'équipe de 3DCovid élabore un prototype, avec l'aide de Jogl.io dans les cas complexes, et
       soumet ses prototypes à une double validation :
-    <ul>
-      <li>validation clinique par un service de l'APHP avec délivrance d'un certificat</li>
-      <li>validation pharmacologique par l'AGEPS</li>
-    </ul>
+      <ul>
+        <li>validation clinique par un service de l'APHP avec délivrance d'un certificat</li>
+        <li>validation pharmacologique par l'AGEPS</li>
+      </ul>
     </p>
     <p>
       A noter que la validation clinique peut comprendre, selon les dispositifs, des tests d'étanchéité et des tests
@@ -44,26 +44,26 @@
     <p>
       Plus précisément, la procédure de soumission du prototype pour validation pharmacologique comprend, pour chaque
       dispositif médical :
-    <ul>
-      <li>
-        un protocole de fabrication, détaillant la procédure de contrôle qualité, les méthodes de suivi de lot, le nettoyage / la stérilisation, le conditionnement et la distribution
-      </li>
-      <li>
-        un protocole de gestion des risques qui comprend une analyse des risques liés aux matériaux, au design, à la fabrication, à l'utilisation et à la désinfection/stérilisation - ces risques sont répertoriés selon une échelle de gravité et de fréquence afin d’en ressortir des étapes préventives pour les diminuer dans un seuil acceptable
-      </li>
-      <li>
-        un dossier technique, comprenant les données du fabricant sur les propriétés des résines utilisées et les caractéristiques des machines
-      </li>
-      <li>
-        un descriptif de la plateforme avec un plan de la répartition des machines
-      </li>
-      <li>
-        une notice d'assemblage et d'utilisation
-      </li>
-      <li>
-        le rapport d'évaluation clinique
-      </li>
-    </ul>
+      <ul>
+        <li>
+          un protocole de fabrication, détaillant la procédure de contrôle qualité, les méthodes de suivi de lot, le nettoyage / la stérilisation, le conditionnement et la distribution
+        </li>
+        <li>
+          un protocole de gestion des risques qui comprend une analyse des risques liés aux matériaux, au design, à la fabrication, à l'utilisation et à la désinfection/stérilisation - ces risques sont répertoriés selon une échelle de gravité et de fréquence afin d’en ressortir des étapes préventives pour les diminuer dans un seuil acceptable
+        </li>
+        <li>
+          un dossier technique, comprenant les données du fabricant sur les propriétés des résines utilisées et les caractéristiques des machines
+        </li>
+        <li>
+          un descriptif de la plateforme avec un plan de la répartition des machines
+        </li>
+        <li>
+          une notice d'assemblage et d'utilisation
+        </li>
+        <li>
+          le rapport d'évaluation clinique
+        </li>
+      </ul>
     </p>
   </div>
 </div>
@@ -79,19 +79,16 @@
     </p>
     <p>
       Les dispositifs sont nettoyés selon le cycle de lavage suivant :
-    <ul>
-      <li>Rinçage à l’eau adoucie froide 20°C à un TH < 7°F de 1 min</li>
-      <li>Lavage à l’eau adoucie à 55°C pendant 5 min avec le détergent NEODISHER MEDICLEAN FORTE à 0.4% de la société
-        Dr WEIGERT
-      </li>
-      <li>Rinçage à l’eau adoucie froide 20°C à un TH < 7°F de 2 min</li>
-      <li>Désinfection thermique à l’eau osmosée (résistivité < 15 µS/cm²/20°C) pour un plateau de 10 minutes à 70°C
-        avec
-        ajout d’un tensio-actif de séchage (NEODISHER MEDIKLAR SPECIAL de la société Dr WEIGERT) à 0.03%
-      </li>
-      <li>Séchage de 30 min à 70°C</li>
-    </ul>
-    La traçabilité des étapes de lavage est effectuée avec le logiciel T-Doc (GETINGE).
+      <ul>
+        <li>Rinçage à l’eau adoucie froide 20°C à un TH < 7°F de 1 min</li>
+        <li>Lavage à l’eau adoucie à 55°C pendant 5 min avec le détergent NEODISHER MEDICLEAN FORTE à 0.4% de la société
+          Dr WEIGERT
+        </li>
+        <li>Rinçage à l’eau adoucie froide 20°C à un TH < 7°F de 2 min</li>
+        <li>Désinfection thermique à l’eau osmosée (résistivité < 15 µS/cm²/20°C) pour un plateau de 10 minutes à 70°C avec ajout d’un tensio-actif de séchage (NEODISHER MEDIKLAR SPECIAL de la société Dr WEIGERT) à 0.03% </li>
+        <li>Séchage de 30 min à 70°C</li>
+      </ul>
+      La traçabilité des étapes de lavage est effectuée avec le logiciel T-Doc (GETINGE).
     </p>
   </div>
 </div>
@@ -100,6 +97,7 @@
 <div class="row">
   <div class="col-sm-12">
     <h2 class="text-center">Diagramme du flux de travail</h2>
-    <%= image_tag("workflow/fsm.png", style: "width: 100%;", alt: "Diagramme FSM") %>
+    <%# image_tag("workflow/fsm.png", style: "width: 100%;", alt: "Diagramme FSM") %>
+    <%= image_tag("workflow/logigramme.png", style: "width: 100%;", alt: "Diagramme FSM") %>
   </div>
 </div>

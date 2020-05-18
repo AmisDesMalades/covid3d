@@ -56,6 +56,10 @@ ActiveRecord::Schema.define(version: 2020_04_21_155824) do
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
+  create_table "machines", force: :cascade do |t|
+    t.string "brand"
+  end
+
   create_table "members", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -94,6 +98,9 @@ ActiveRecord::Schema.define(version: 2020_04_21_155824) do
     t.boolean "view_flag"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "products", force: :cascade do |t|
   end
 
   create_table "projects", force: :cascade do |t|
@@ -155,6 +162,9 @@ ActiveRecord::Schema.define(version: 2020_04_21_155824) do
     t.index ["user_id"], name: "index_services_on_user_id"
   end
 
+  create_table "suppliers", force: :cascade do |t|
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -170,8 +180,6 @@ ActiveRecord::Schema.define(version: 2020_04_21_155824) do
     t.string "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.boolean "validator", default: false
-    t.boolean "platform", default: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

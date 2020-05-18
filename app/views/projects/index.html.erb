@@ -4,9 +4,9 @@
       <%= fa_icon("tasks") %>
       Catalogue de projets
       <% if policy(Project.new).create? %>
-        <%= link_to new_project_path, class: 'btn btn-primary' do %>
-          <%= fa_icon("plus") %>
-        <% end %>
+      <%= link_to new_project_path, class: 'btn btn-primary' do %>
+      <%= fa_icon("plus") %>
+      <% end %>
       <% end %>
     </h1>
     <p class="lead text-muted">
@@ -47,13 +47,13 @@
 </div>
 
 <% if @projects.repair.length > 0 %>
-  <hr>
-  <h2>
-    <%= fa_icon("wrench") %>
-    Pièces d'appareils
-  </h2>
-  <br>
-  <div class="card-columns">
-    <%= render partial: '/projects/card', collection: @projects.repair, as: :project, cached: true %>
-  </div>
+<hr>
+<h2>
+  <%= fa_icon("wrench") %>
+  Maintenance
+</h2>
+<br>
+<div class="card-columns">
+  <%= render partial: '/projects/card', collection: @projects.repair, as: :project, cached: true %>
+</div>
 <% end %>
